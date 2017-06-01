@@ -1,0 +1,33 @@
+Lineamientos generales: 
+
+Antes del codigo de una funcion nueva:
+
+##################################################
+
+# los argumentos de entrada de funcion_nueva son los siguientes:
+
+# arg: descripcion..tipo de var..ejemplo..nota
+
+# arg: descripcion..tipo de var..ejemplo..nota
+
+# arg: descripcion..tipo de var..ejemplo..nota
+
+# arg: descripcion..tipo de var..ejemplo..nota
+
+##################################################
+
+# los argumentos de salida son los siguientes:
+
+# arg: descripcion..tipo de var..ejemplo..nota
+
+# arg: descripcion..tipo de var..ejemplo..nota
+
+# arg: descripcion..tipo de var..ejemplo..nota
+
+# arg: descripcion..tipo de var..ejemplo..nota
+
+##################################################
+
+import librosa
+import numpy as np
+import matplotlib.pyplot as plt
