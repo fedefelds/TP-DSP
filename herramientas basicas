@@ -1,4 +1,4 @@
-# En basic-tools se encuentran las herramientas basicas que se utilizaran para 
+# En este archivo se presentan las herramientas basicas que se utilizaran para 
 # condicionar las senales a procesar. Hay 3 tareas basicas:
 # 
 # Cargar audios <-- cargar_audio.py
