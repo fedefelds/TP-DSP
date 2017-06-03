@@ -19,5 +19,3 @@ beat_times = librosa.frames_to_time(beat_frames, sr=sr)
 
 print('Saving output to beat_times.csv')
 librosa.output.times_csv('beat_times.csv', beat_times)
-
-# aver que onda esto...
