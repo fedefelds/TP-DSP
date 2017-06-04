@@ -31,6 +31,8 @@ import librosa
 import numpy as np
 from cargar_audio import cargar_audio # todo:  si no escribo esto asi, me da 'module object is not callable'
 import matplotlib.pyplot as plt
+import matplotlib as mpl
+mpl.rcParams['agg.path.chunksize'] = 10000
 
 def extraer_silencio(y, top_db=60, ref=np.amax, frame_length=2048, hop_length=512):
     y,sr = cargar_audio('/Users/Fede/Documents/Github/TP-DSP/07_Calling_All_My_Lovelies.wav',None,True,0,None,np.float32,'kaiser_best')
