@@ -30,7 +30,9 @@
 # sr: sample rate..[scalar]
 
 ##################################################
-# Ejemplo:  y,sr = cargar_audio('/Users/Fede/Downloads/07_Calling_All_My_Lovelies.wav',None,True,0,None,np.float32,'kaiser_best')
+# Ejemplo:
+# filename='/Users/Fede/Documents/Github/TP-DSP/prueba.wav'
+#   y,sr = cargar_audio(filename,None,True,0,None,np.float32,'kaiser_best')
 ##################################################
 
 import librosa
@@ -42,5 +44,3 @@ def cargar_audio(path, sr, mono, offset, duration,dtype, res_type):
     y,sr = librosa.core.load(path, sr, mono, offset, duration, dtype, res_type)
 
     return (y,sr)
-
-y,sr = cargar_audio('/Users/Fede/Documents/Github/TP-DSP/07_Calling_All_My_Lovelies.wav',None,True,0,None,np.float32,'kaiser_best')
