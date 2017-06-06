@@ -30,12 +30,14 @@
 # sr: sample rate..[scalar]
 
 ##################################################
-# Ejemplo:  y,sr = cargar_audio('/Users/Fede/Downloads/07_Calling_All_My_Lovelies.wav',None,True,0,None,np.float32,'kaiser_best')
+# Ejemplo:
+# filename='/Users/Fede/Documents/Github/TP-DSP/prueba.wav'
+#   y,sr = cargar_audio(filename,None,True,0,None,np.float32,'kaiser_best')
 ##################################################
 
 import librosa
-# import numpy as np
-# import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib.pyplot as plt
 
 def cargar_audio(path, sr, mono, offset, duration,dtype, res_type):
 
