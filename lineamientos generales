@@ -1,10 +1,10 @@
-Lineamientos generales: 
+Lineamientos generales:
 
 Antes del codigo de una funcion nueva:
 
 ##################################################
 
-# los argumentos de entrada de funcion_nueva son los siguientes:
+# los argumetos de entrada de funcion_nueva son los siguientes:
 
 # arg: descripcion..tipo de var..ejemplo..nota
 
@@ -16,7 +16,7 @@ Antes del codigo de una funcion nueva:
 
 ##################################################
 
-# los argumentos de salida son los siguientes:
+# esta funcion devuelve los siguientes:
 
 # arg: descripcion..tipo de var..ejemplo..nota
 
