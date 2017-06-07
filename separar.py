@@ -15,7 +15,7 @@
 
 ##################################################
 
-# los argumentos de salida son los siguientes:
+# esta funcion devuelve los siguientes:
 
 # arg: descripcion..tipo de var..ejemplo..nota
 
