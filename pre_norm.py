@@ -22,6 +22,7 @@ import numpy as np
 from cargar_audio import cargar_audio  # todo:  si no escribo esto asi, me da 'module object is not callable'
 import matplotlib.pyplot as plt
 import matplotlib as mpl
+from maximo import maximo
 mpl.rcParams['agg.path.chunksize'] = 10000
 
 
@@ -39,11 +40,5 @@ mpl.rcParams['agg.path.chunksize'] = 10000
 # Se puede ver que el valor de b depende del valor de a, mientras que el valor
 # de a no depende de b...por eso hay que calcular a primero y b despues.
 #
-# Para implementar el max([abs(m[0,0]-m[0,1]),abs(m[1,0]-m[1,1]),...,abs(m[a-1,0]-m[a-1,1])
-# se puede usar un ciclo for:
-#
-# maximo= -infinito
-# for i desde 0 hasta a-1
-#   if abs([abs(m[i,0]-m[i,1]))>maximo
-#       maximo=abs([abs(m[i,0]-m[i,1]))
-# return maximo
+# Para la implementacion de max([abs(m[0,0]-m[0,1]),abs(m[1,0]-m[1,1]),...,abs(m[a-1,0]-m[a-1,1])
+# ver maximo.py (import en linea 25)
