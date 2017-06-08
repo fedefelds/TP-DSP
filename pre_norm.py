@@ -31,8 +31,8 @@ mpl.rcParams['agg.path.chunksize'] = 10000
 # Ej:
 # matriz_de_intervalos[1]==[59500,80550]
 #
-# 1) crear una matriz nula de a filas y b columnas. El numero filas a es igual a
-# la cantidad de intervalos no silenciosos,dada por el valor de
+# 1) crear una matriz nula de a filas y b columnas. El numero a es igual a
+# la cantidad de intervalos no silenciosos, y esta dada por el valor de
 # matriz_de_intervalos.shape(0). El valor b es igual al numero de muestras
 # del intervalo con mayor cantidad de muestras. Para la brevedad, definimos
 # m=matriz_de_intervalos. Entonces, el valor de b esta dado por:
@@ -42,3 +42,17 @@ mpl.rcParams['agg.path.chunksize'] = 10000
 #
 # Para la implementacion de max([abs(m[0,0]-m[0,1]),abs(m[1,0]-m[1,1]),...,abs(m[a-1,0]-m[a-1,1])
 # ver maximo.py (import en linea 25)
+#
+# 2) Ahora, la idea es asignar a la fila i de la matriz matriz_de_intervalos el intervalo no
+# silencioso. Esto se implementa con un loop for:
+#
+#
+#
+# for i desde 0 hasta m.shape[0]
+  # m[i]=y[m[i,0]:m[i,1]]
+
+
+
+
+t2=np.pad[t,3,'constant']
+t3=t2[3:]
