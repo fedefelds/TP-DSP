@@ -1,4 +1,4 @@
-##################################################
+    ##################################################
 
 # los argumentos de entrada de funcion_nueva son los siguientes:
 
@@ -25,6 +25,12 @@ import matplotlib as mpl
 from maximo import maximo
 mpl.rcParams['agg.path.chunksize'] = 10000
 
+# usar maximo() y padder()
+def pre_norm(s):
+    m=separar(filename)
+    salida_pre_normalizada=padder(m,s)
+return salida_pre_normalizada
+
 
 
 # matriz_de_intervalos[i]==start and end time (in samples) of non-silent interval i.
@@ -48,11 +54,3 @@ mpl.rcParams['agg.path.chunksize'] = 10000
 #
 #
 #
-# for i desde 0 hasta m.shape[0]
-  # m[i]=y[m[i,0]:m[i,1]]
-
-
-
-
-t2=np.pad[t,3,'constant']
-t3=t2[3:]

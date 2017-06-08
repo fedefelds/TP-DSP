@@ -18,16 +18,6 @@
 #
 # for i desde 0 hasta la ultima fila de la matriz de intervalos
 #   if abs(m[i,0]-m[i,1])<m.shape[0]
-#
-#
-#
-#
-#
-#
-#
-
-
-
 import numpy as np
 from maximo import maximo
 
@@ -43,9 +33,11 @@ def padder(m,y):
             matriz_con_ceros[i]=array_auxiliar
         else:
             matriz_con_ceros[i] = y[int(m[i,0]):m[i,1]]
-    return matriz_con_ceros
+    return matriz_con_ceros.astype(int)
 
-m=np.array([[0,5],[10,20],[25,30]])
-y=[1, 2, 3, 4, 5, 0, 0, 0, 0, 0, 5, 4, 3, 2, 1, 1, 2, 3, 4, 5, 0, 0, 0, 0, 0, 0, 4, 3, 2, 1]
-m2=padder(m,y)
-print(m2)
+
+# m=np.array([[0,5],[10,20],[25,30]])
+# y=[1, 2, 3, 4, 5, 0, 0, 0, 0, 0, 5, 4, 3, 2, 1, 1, 2, 3, 4, 5, 0, 0, 0, 0, 0, 0, 4, 3, 2, 1]
+# m2=padder(m,y)
+# print(m2)
+
