@@ -18,13 +18,24 @@
 #
 # for i desde 0 hasta la ultima fila de la matriz de intervalos
 #   if abs(m[i,0]-m[i,1])<m.shape[0]
+#
+#
+
 import numpy as np
+from maximo import maximo
+import librosa
+import numpy as np
+import matplotlib.pyplot as plt
+from cargar_audio import cargar_audio
+filename='/Users/Fede/Documents/Github/TP-DSP/prueba.wav'
+y,sr = cargar_audio(filename,None,True,0,None,np.float32,'kaiser_best')
+from  separar import separar
+hop=50
+m=separar(filename,hop_length=hop)
 from maximo import maximo
 
 
-
-
-def padder(m,y):
+def padder(m,y,hop):
     matriz_con_ceros=np.zeros([m.shape[0],maximo(m)])
     for i in range(0,m.shape[0]):
         if (m[i,1]-m[i,0])<matriz_con_ceros.shape[1]:
@@ -32,12 +43,13 @@ def padder(m,y):
             array_auxiliar=array_auxiliar[(abs(matriz_con_ceros.shape[1]-(m[i,1]-m[i,0]))):]
             matriz_con_ceros[i]=array_auxiliar
         else:
-            matriz_con_ceros[i] = y[int(m[i,0]):m[i,1]]
-    return matriz_con_ceros.astype(int)
+            array_auxiliar=np.pad(y[int(m[i,0]):m[i,1]],hop,'constant')
+            array_auxiliar = array_auxiliar[hop:]
+            matriz_con_ceros[i] = array_auxiliar
+    for i in range(0, m.shape[0]):
+        nombre = 'fragmento_' + str(i)
+        librosa.output.write_wav(nombre, matriz_con_ceros[i], sr, norm=False)
 
 
-# m=np.array([[0,5],[10,20],[25,30]])
-# y=[1, 2, 3, 4, 5, 0, 0, 0, 0, 0, 5, 4, 3, 2, 1, 1, 2, 3, 4, 5, 0, 0, 0, 0, 0, 0, 4, 3, 2, 1]
-# m2=padder(m,y)
-# print(m2)
 
+print(np.max(padder(m,y,50)))

@@ -1,5 +1,27 @@
-    ##################################################
+# pre_norm.py toma la matriz m y al vector de la cancion. Se encarga de devolver la matriz M cuya i-esima fila
+# contiene las muestras que corresponden al i-esimo intervalo no silencioso de la cancion. (tiene zero pad)
+#
+# pre_norm.py requiere de dos funciones propias: maximo.py y padder.py
+# Para que padder.py funcione hay que crear una matriz de ceros cuyas dimensiones dependen de los valores de m.
+# Dichas dimensiones quedan totalmente cuande se le aplica maximo.py a la matriz m
+#
+#
+#
+# senal de prueba: x=[1,2,3,4,5,0,0,0,0,0,5,4,3,2,1,1,2,3,4,5,0,0,0,0,0,0,4,3,2,1]
 
+
+
+
+
+
+
+
+
+
+
+
+
+########################################################################################################################
 # los argumentos de entrada de funcion_nueva son los siguientes:
 
 # matriz_de_intervalos: Esta matriz es el resultado de aplicar separar.py a una
@@ -22,15 +44,22 @@ import numpy as np
 from cargar_audio import cargar_audio  # todo:  si no escribo esto asi, me da 'module object is not callable'
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-from maximo import maximo
+from padder import padder
+
 mpl.rcParams['agg.path.chunksize'] = 10000
 
-# usar maximo() y padder()
-def pre_norm(s):
-    m=separar(filename)
-    salida_pre_normalizada=padder(m,s)
-return salida_pre_normalizada
 
+def pre_norm(s,m):
+    M=padder(m,s)
+    return salida_pre_normalizada
+
+
+
+# def pre_norm(s):
+#     m=separar(filename)
+#     salida_pre_normalizada=padder(m,s)
+# return salida_pre_normalizada
+#
 
 
 # matriz_de_intervalos[i]==start and end time (in samples) of non-silent interval i.
