@@ -39,7 +39,7 @@ import librosa
 import numpy as np
 import matplotlib.pyplot as plt
 
-def cargar_audio(path, sr, mono, offset, duration,dtype, res_type):
+def cargar_audio(path, sr=None, mono=True, offset=0, duration=None,dtype=np.float32, res_type='kaiser_best'):
 
     y,sr = librosa.core.load(path, sr, mono, offset, duration, dtype, res_type)
 
