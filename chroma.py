@@ -10,7 +10,7 @@ def chromagram(filename,S=None,norm=None,n_fft=2048,hop_length=50):
     y = normalizar(y)
     chromagrama=librosa.feature.chroma_cqt(y,sr)
     plt.figure(figsize=(10,4))
-    librosa.display.specshow(chromagrama,y_axis='chroma',x_axis='time')
+    librosa.display.specshow(chromagrama,y_axis='chroma',x_axis='time',sr=sr)
     plt.colorbar()
     plt.title('chromagram')
     plt.tight_layout()
