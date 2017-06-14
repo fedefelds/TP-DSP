@@ -1,0 +1,189 @@
+
+\documentclass[]{article}
+%\documentclass[journal,10pt,draftclsnofoot,onecolumn]{IEEEtran}
+%\usepackage{graphics,multirow,amsmath,amssymb,textcomp,subfigure,multirow,xspace,arydshln,cite}
+
+\usepackage[]{graphicx}   % para manejar graficos
+
+\usepackage[space]{grffile} % para manejar graficos
+
+\usepackage{caption}
+
+\usepackage{enumerate}    % para hacer listas numeradas
+
+\usepackage{amsmath}        % no se..
+
+\usepackage{amsfonts}     % no se..
+
+\usepackage{authblk}    % para definir las afiliaciones de cada autor
+
+\usepackage{layout}     % no se..
+
+\usepackage[sorting=none]{biblatex}   % para manejar la bibliografia / referencias
+
+\usepackage{lipsum}     % para generar texto random
+
+\usepackage{multicol}   % para usar dos columnas
+
+\usepackage{palatino}   % para que la fuente sea palatino
+
+\usepackage[utf8]{inputenc} % para poder usar tildes
+
+\usepackage[spanish]{babel} % para escribir en español
+
+\addto\captionsspanish{\def\tablename{Tabla}} % cambiar ``cuadro'' por ``Tabla''
+
+\usepackage[sc,big,raggedright,bf]{titlesec} % para definir el formato del header de cada seccion.
+
+\usepackage[font=small]{caption} % para que la fuente de un epigrafe no tenga el mismo tamaño que el cuerpo del texto
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ textwidth={17cm},
+ textheight={23cm},
+ left={2cm},
+ top={2.5cm},
+ }
+
+\setlength{\columnsep}{1cm} % para que la separacion entre columnas sea de 1 cm
+
+\graphicspath {{imagenes/}}
+
+\defbibheading{bibliography}{\section{\refname}} % para que bibtex no imponga su header cuando uso \printbibliography, y que se use el de babel
+
+\addbibresource{bibliografia.bib} % para importar el archivo .bib
+
+\title{\textbf{\LARGE{\textsf{DESCRIPTORES PARA ANÁLISIS AUTOMÁTICO DE MÚSICA}}}}
+ % defino el titulo del Paper
+
+\date{} % lo pongo vacio para que no aparezca abajo del abstract
+
+\usepackage{fancyhdr}
+
+\usepackage{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/multicol_hint.html
+\makeatletter           % esto lo uso para poder definir figuras
+\newenvironment{tablehere}    % esto lo uso para poder definir figuras
+  {\def\@captype{table}}    % esto lo uso para poder definir figuras
+
+  {}              % esto lo uso para poder definir figuras
+                  % esto lo uso para poder definir figuras
+\newenvironment{figurehere}   % esto lo uso para poder definir figuras
+  {\def\@captype{figure}}   % esto lo uso para poder definir figuras
+  {\par\medskip}
+  {}              % esto lo uso para poder definir figuras
+\makeatother          % esto lo uso para poder definir figuras
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               ACA EMPIEZA EL DOCUMENTO                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document} % empieza el documentoo
+
+
+\renewcommand{\headrulewidth}{0pt} % para que no haya linea decorativa en el header.
+
+
+\author[1]{Federico Feldsberg} % defino el autor
+\affil[1]{Universidad Nacional de Tres De Febrero, Buenos Aires, Argentina \newline \texttt{fedefelds@hotmail.com}} % afiliacion del autor
+
+
+\begin{minipage}[h]{\textwidth} % uso el entorno minipage para que el abstract este en la misma pagina que el titulo
+    \maketitle
+    \thispagestyle{fancy}
+    \fancyhf{}
+    \rhead{19 de junio de 2017}
+    \lhead{Procesamiento digital de señales}
+    \cfoot{\thepage}
+
+\end{minipage}
+
+
+\begin{abstract}
+
+\textit{Se hace un codigo que basicamente pude hacer muchas cosas. Se eligen 3 descriptores..\lipsum[1]}
+
+\end{abstract}
+
+\vspace{1.5cm}% Additional space between abstract & rest of document
+
+\begin{multicols}{2}
+\section{Introducción}
+En este informe se describe el diseño y la implementacion de un sistema capaz de
+analizar canciones y extraer informacion util de las mismas. Para ello se desarrllo
+una serie de herramientas basadas en la libreria \textit{Librosa}. Dicha libreria
+es de código abierto y esta validada por...AGREGAR VALIDACION...
+\lipsum[2]
+\lipsum[3]
+Los objetivos de este trabajo son los siguientes:
+\begin{itemize}
+  \item Implementar un sistema que pueda remover el silencio al principio y al final de una señal
+  \item Implementar un sistema que pueda normalizar la amplitud de una señal
+  \item Implementar un sistema que pueda visualizar la STFT de una señal
+  \item Implementar un sistema que pueda estimar el tempo de una señal
+  \item Implementar un sistema que pueda calcular 3 descriptores a elegir
+  \item Implementar un sistema que pueda normalizar los valores obtenidos
+  \item Procesar un disco de música con las herramientas desarrolladas
+\end{itemize}
+
+\section{Descriptores Elegidos}
+\subsection{Chroma Analisys}
+El Chroma analisys fue introducido por primera vez por Fujishima en \cite{fujishima1999realtime}.
+Dicho analisis es una manera de representar las caracteristicas espectrales
+de una señal sonora. En dicha representacion, el espectro de frecuencias es
+proyectado en 12 bins. Cada bin representa uno de los 12 distintos semitonos
+de una octava musical. En otras palabras, todas las octavas de una nota musical
+son mapeadas a uno de los 12 bins. Debido a esto es posible sintetizar, con cierta
+pérdida de informacion, una señal a partir de su Chroma Analisys, mediante Chroma
+Synthesis.
+
+En \cite{Ellis} Ellis sostiene que el Chroma analisys puede dar informacion
+util acerca de la señal en cuestion que no es evidente en el espectro original de
+la señal. Por ejemplo, es capaz de señalar la similaridad musical percibida en
+un tono de Shepard \cite{bello}.
+
+Dicho analisis es implementado mediante el uso de la funcion \emph{{librosa.feature.chroma\_stft}}.
+\subsection{Spectral Contrast}
+Dada una señal musical, se presenta el problema de como identificar a que tipo de
+musica pertenece la señal en cuestion. Este descriptor resulta util a la hora de
+realizar esta tarea. Jiang indica que es posible que este descriptor puede llegar
+a tener una mejor capacidad de discriminacion de tipos musicales que los MFCC
+\cite{DanNingJiang}.
+
+Octave-based Spectral Contrast considers the spectral peak, spectral valley and
+their difference in each sub-band. For most music, the strong spectral peaks
+roughly correspond with harmonic components; while non-harmonic components, or
+noises, often appear at spectral valleys. Thus, Spectral Contrast feature
+could roughly reflect the relative distribution of the harmonic and non-harmonic
+components in the spectrum. Previous features, such as MFCC, average the
+spectral distribution in each sub-band, and thus lose the relative spectral
+information. Considering two spectra which have different spectral distribution
+ may have similar average spectral characteristics, the average spectral
+ distribution is not sufficient to represent the spectral characteristics of
+ music. However, Spectral Contrast keeps more information and may have a better
+ discrimination in music type classification.
+\subsection{Descriptor 3}
+
+\section{Arreglo experimental}
+\subsection{Método 1}
+\section{Resultados}
+
+
+
+
+
+\section{Análisis de resultados}
+
+\section{Conclusión}
+
+
+\printbibliography
+\end{multicols}
+
+
+
+\end{document}
