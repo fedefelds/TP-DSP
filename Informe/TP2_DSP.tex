@@ -133,18 +133,21 @@ Los objetivos de este trabajo son los siguientes:
 \section{Descriptores Elegidos}
 
 \subsection{Tempo}
-La estimacion del tempo es fundamental para el procesamiento automatico de musica.
-\cite{goto1997issues}
+La estimacion del tempo es fundamental para el procesamiento automatico de musica
+Segun Alonso et al. \cite{alonso2004tempo}, el tempo es un elemento que sustenta
+la musica occidental, y por lo tanto su comprension y modelado es de gran interes
+en el campo del procesamiento automatico de musica.
 
-Tempo estimation is fundamental in automatic music processing and in many
-multimedia applications. This paper presents an automatic tempo tracking system
-that processes audio recordings and determines the beats per minute and temporal
-beat location.
+Es por eso que hoy en dia existen varias opciones a la hora de estimar el tempo
+de una cancion \cite{goto1997issues}. En este caso, se implementa este descriptor
+mediante el uso de la funcion \emph{{librosa.feature.chroma\_stft}}.
+
 
 
 \cite{alonso2004tempo}
 En este trabajo, dicho analisis es implementado mediante el uso del metodo \emph{{librosa.beat.tempo}}.
 \subsection{Chroma Analisys}
+\label{Sec:Chroma}
 El Chroma analisys fue introducido por primera vez por Fujishima en \cite{fujishima1999realtime}.
 Dicho analisis es una manera de representar las caracteristicas espectrales
 de una señal sonora. En dicha representacion, el espectro de frecuencias es
@@ -177,7 +180,14 @@ de las componentes armonicas y no armonicas del espectro.
 En este trabajo, dicho analisis es implementado mediante el uso de la funcion \emph{{librosa.feature.spectral\_contrast}}.
 \subsection{Tempogram}
 
-\cite{kurth2006cyclic}
+
+Este descriptor se basa en un tratamiento similar al presentado en la seccion
+\ref{Sec:Chroma}. En el caso de dicha seccion, se recurre a mapear varias octavas
+o harmonicos a una determinada cantidad de bins \cite{kurth2006cyclic}. En el caso del tempograma se
+recurre a mapear varios tempos que difieren por un factor de 2 en un mismo bin.
+En terminos analogos, podemos pensar en los armonicos de una frecuencia dada,
+que no son mas que frecuencias relacionadas por un factor de 2.
+
 En este trabajo, dicho analisis es implementado mediante el uso del metodo \emph{{librosa.feature.tempogram}}.
 \section{Resultados}
 
