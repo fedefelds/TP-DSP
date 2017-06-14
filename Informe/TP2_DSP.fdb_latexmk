@@ -1,12 +1,12 @@
 # Fdb version 3
-["biber TP2_DSP"] 1497464776 "TP2_DSP.bcf" "TP2_DSP.bbl" "TP2_DSP" 1497465593
-  "TP2_DSP.bcf" 1497465593 100109 dba6d27344485ff664c7b3a6d4d13c71 ""
-  "bibliografia.bib" 1497464734 984 73d8f253e42614a176881cbd2eef647e ""
+["biber TP2_DSP"] 1497478561 "TP2_DSP.bcf" "TP2_DSP.bbl" "TP2_DSP" 1497479512
+  "TP2_DSP.bcf" 1497479512 100279 f03c3e47a656befc0de4894a11a9542c ""
+  "bibliografia.bib" 1497478539 1802 3295832cc0a1a1053cb983cebcdb60f0 ""
   (generated)
   "TP2_DSP.bbl"
   "TP2_DSP.blg"
-["pdflatex"] 1497465592 "TP2_DSP.tex" "TP2_DSP.pdf" "TP2_DSP" 1497465593
-  "./TP2_DSP.out" 1497465593 613 fee1f40054eb473e7213c26ef93aa60d ""
+["pdflatex"] 1497479511 "TP2_DSP.tex" "TP2_DSP.pdf" "TP2_DSP" 1497479512
+  "./TP2_DSP.out" 1497479512 548 305879dc6a2763f138e696e0724abed4 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -133,15 +133,15 @@
   "/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1432479641 1764542 91654ba72bdb667e84ea24f076ae16d8 ""
   "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1461447283 3849859 d06f0633cadadb6f745f20b80feff1a8 ""
   "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
-  "TP2_DSP.aux" 1497465593 3166 8aa6654669ddf8b8a066a433677725fa ""
-  "TP2_DSP.bbl" 1497464776 3747 eb77c39f40fc6593e039c8a4734bf998 "biber TP2_DSP"
-  "TP2_DSP.out" 1497465593 613 fee1f40054eb473e7213c26ef93aa60d ""
-  "TP2_DSP.run.xml" 1497465593 2328 613010b53ee90b8ef77ba5a2dba4a28f ""
-  "TP2_DSP.tex" 1497465592 7295 6e0ede2c65e1adbfcc18cf1adce6c39c ""
+  "TP2_DSP.aux" 1497479512 3098 576b2a195e4adb8687852143b8f7e6a6 ""
+  "TP2_DSP.bbl" 1497478562 6414 99228528584ef5b602b556e88bf34669 "biber TP2_DSP"
+  "TP2_DSP.out" 1497479512 548 305879dc6a2763f138e696e0724abed4 ""
+  "TP2_DSP.run.xml" 1497479512 2328 613010b53ee90b8ef77ba5a2dba4a28f ""
+  "TP2_DSP.tex" 1497479510 7597 4ce3f94e232dfc0fddfa13b1a31171ee ""
   (generated)
-  "TP2_DSP.log"
+  "TP2_DSP.out"
   "TP2_DSP.pdf"
   "TP2_DSP.bcf"
   "TP2_DSP.run.xml"
+  "TP2_DSP.log"
   "TP2_DSP.aux"
-  "TP2_DSP.out"

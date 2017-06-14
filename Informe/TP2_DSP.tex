@@ -131,6 +131,19 @@ Los objetivos de este trabajo son los siguientes:
 \end{itemize}
 
 \section{Descriptores Elegidos}
+
+\subsection{Tempo}
+La estimacion del tempo es fundamental para el procesamiento automatico de musica.
+\cite{goto1997issues}
+
+Tempo estimation is fundamental in automatic music processing and in many
+multimedia applications. This paper presents an automatic tempo tracking system
+that processes audio recordings and determines the beats per minute and temporal
+beat location.
+
+
+\cite{alonso2004tempo}
+En este trabajo, dicho analisis es implementado mediante el uso del metodo \emph{{librosa.beat.tempo}}.
 \subsection{Chroma Analisys}
 El Chroma analisys fue introducido por primera vez por Fujishima en \cite{fujishima1999realtime}.
 Dicho analisis es una manera de representar las caracteristicas espectrales
@@ -146,30 +159,26 @@ util acerca de la señal en cuestion que no es evidente en el espectro original 
 la señal. Por ejemplo, es capaz de señalar la similaridad musical percibida en
 un tono de Shepard \cite{bello}.
 
-Dicho analisis es implementado mediante el uso de la funcion \emph{{librosa.feature.chroma\_stft}}.
+En este trabajo, dicho analisis es implementado mediante el uso de la funcion \emph{{librosa.feature.chroma\_stft}}.
 \subsection{Spectral Contrast}
 Dada una señal musical, se presenta el problema de como identificar a que tipo de
 musica pertenece la señal en cuestion. Este descriptor resulta util a la hora de
-realizar esta tarea. Jiang indica que es posible que este descriptor puede llegar
+realizar esta tarea. Jiang et al. indica que es posible que este descriptor puede llegar
 a tener una mejor capacidad de discriminacion de tipos musicales que los MFCC
 \cite{DanNingJiang}.
 
-Octave-based Spectral Contrast considers the spectral peak, spectral valley and
-their difference in each sub-band. For most music, the strong spectral peaks
-roughly correspond with harmonic components; while non-harmonic components, or
-noises, often appear at spectral valleys. Thus, Spectral Contrast feature
-could roughly reflect the relative distribution of the harmonic and non-harmonic
-components in the spectrum. Previous features, such as MFCC, average the
-spectral distribution in each sub-band, and thus lose the relative spectral
-information. Considering two spectra which have different spectral distribution
- may have similar average spectral characteristics, the average spectral
- distribution is not sufficient to represent the spectral characteristics of
- music. However, Spectral Contrast keeps more information and may have a better
- discrimination in music type classification.
-\subsection{Descriptor 3}
+Dicho descriptor considera las diferencias entre los picos espectrales y los valles
+espectrales para cada sub banda. En la mayoria de los casos en los que se analiza
+musica, los fuertes picos corresponden aproximadamente con las componentes armonicas
+mientras que las componentes no armonicas o ruidos corresponden con los valles.
+Por eso el descriptor en cuestión permite caracterizar la distribucion relativa
+de las componentes armonicas y no armonicas del espectro.
 
-\section{Arreglo experimental}
-\subsection{Método 1}
+En este trabajo, dicho analisis es implementado mediante el uso de la funcion \emph{{librosa.feature.spectral\_contrast}}.
+\subsection{Tempogram}
+
+\cite{kurth2006cyclic}
+En este trabajo, dicho analisis es implementado mediante el uso del metodo \emph{{librosa.feature.tempogram}}.
 \section{Resultados}
 
 

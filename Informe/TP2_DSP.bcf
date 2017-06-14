@@ -2212,10 +2212,13 @@
     <bcf:datasource type="file" datatype="bibtex">bibliografia.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">fujishima1999realtime</bcf:citekey>
-    <bcf:citekey order="2">Ellis</bcf:citekey>
-    <bcf:citekey order="3">bello</bcf:citekey>
-    <bcf:citekey order="4">DanNingJiang</bcf:citekey>
+    <bcf:citekey order="1">goto1997issues</bcf:citekey>
+    <bcf:citekey order="2">alonso2004tempo</bcf:citekey>
+    <bcf:citekey order="3">fujishima1999realtime</bcf:citekey>
+    <bcf:citekey order="4">Ellis</bcf:citekey>
+    <bcf:citekey order="5">bello</bcf:citekey>
+    <bcf:citekey order="6">DanNingJiang</bcf:citekey>
+    <bcf:citekey order="7">kurth2006cyclic</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="none" type="entry" sortscheme="none">
   <bcf:sorting>

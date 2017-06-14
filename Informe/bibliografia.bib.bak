@@ -18,6 +18,30 @@
   url    = {http://www.nyu.edu/classes/bello/MIR_files/tonality.pdf},
 }
 
+@InProceedings{DanNingJiang,
+  author    = {Dan-Ning Jiang and Lie Lu and Hong-Jiang Zhang and Jian-Hua Tao and Lian-Hong Cai},
+  title     = {Music type classification by spectral contrast feature},
+  booktitle = {Proceedings. {IEEE} International Conference on Multimedia and Expo},
+  publisher = {{IEEE}},
+  doi       = {10.1109/icme.2002.1035731},
+  url       = {https://doi.org/10.1109/icme.2002.1035731},
+}
+
+@InProceedings{kurth2006cyclic,
+  author    = {Kurth, Frank and Gehrmann, Thorsten and M{\"u}ller, Meinard},
+  title     = {The Cyclic Beat Spectrum: Tempo-Related Audio Features for Time-Scale Invariant Audio Identification.},
+  booktitle = {ISMIR},
+  year      = {2006},
+  pages     = {35--40},
+}
+
+@InProceedings{alonso2004tempo,
+  author    = {Alonso, Miguel A and Richard, Ga{\"e}l and David, Bertrand},
+  title     = {Tempo And Beat Estimation Of Musical Signals.},
+  booktitle = {ISMIR},
+  year      = {2004},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 ,
