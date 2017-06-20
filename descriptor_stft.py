@@ -6,7 +6,7 @@ import librosa
 import numpy as np
 import matplotlib.pyplot as plt
 carpeta='/Users/Fede/Desktop/'
-filename='copia de burno mars'
+filename='burno mars'
 formato='.mp3'
 filename=carpeta+filename+formato
 # cargar audio

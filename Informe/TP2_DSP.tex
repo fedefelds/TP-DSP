@@ -69,7 +69,17 @@
 \label{#3}
 \end{figurehere}
 }
-
+\newcommand{\tabla}[4]{
+\begin{tablehere}
+\begin{center}
+\begin{tabular}{#1}
+#2
+\end{tabular}
+\caption{#3}
+\label{#4}
+\end{center}
+\end{tablehere}
+}
 
 \usepackage{fancyhdr}
 
@@ -158,7 +168,7 @@ silenciosas y la cantidad total de muestras:
   SR=\frac{N-M_s}{N}
 \end{equation}
 
-Como $N-M_s\leq N$, entonces $0 \leq SR \leq 1$.
+Como  0 $\leq N-M_s\leq N$, entonces $0 \leq SR \leq 1$.
 Una canción cuyo $SR$ es 1 corresponde a una señal totalmente silenciosa.
 Similarmente, una cancion cuyo $SR$ es nulo corresponde a una señal totalmente
 no silenciosa.
@@ -217,10 +227,13 @@ en la sección \ref{sec: intro}. En las subsecciones \ref{sec: prep}, \ref{sec: 
  y \ref{sec: tempo} se utiliza la canción \emph{Brain Stew} de GreenDay como
 señal de prueba.
 \subsection{Preparación de la señal temporal}
+%  Implemente un sistema que pueda cargar sen ̃ales de audio, remover el
+%  silencio al principio y al final de las mismas y normalizarlas.
+%  Esta tarea puede verse diagramada en los bloques violetas de la Figura 1.
 \label{sec: prep}
 La preparacion de la señal consistie en cargar el archivo, extraer el silencio
 al principio y al final y finalmente, normalizar la señal. Dichas tareas se
-implementan mediante un script en python:
+implementan mediante un script en python disponible en \
 
 
 \subsection{Visualización de la STFT}
@@ -247,17 +260,89 @@ Para la estimacion del tempo se implementa el siguiente script:
 \end{multicols}
 
 \newpage
+
 \appendix
+\section{Resultados adicionales}
+
+\tabla
+{|l|c|c|c|c|c|c|c|c|c|c|}
+{
+\hline
+ &Tema 1 & Tema 2 & Tema 3 & Tema 4 & Tema 5 & Tema 6 & Tema 7 & Tema 8 & Tema 9 & Tema 10 \\
+\hline
+Bin 1 & 0.504 & 0.530 & 0.457 & 0.570 & 0.417 & 0.324 & 0.551 & 0.459 & 0.406 & 0.351 \\
+\hline
+Bin 2 & 0.507 & 0.449 & 0.436 & 0.470 & 0.514 & 0.463 & 0.505 & 0.489 & 0.392 & 0.489 \\
+\hline
+Bin 3 & 0.559 & 0.484 & 0.562 & 0.423 & 0.683 & 0.609 & 0.507 & 0.576 & 0.464 & 0.645 \\
+\hline
+Bin 4 & 0.523 & 0.428 & 0.712 & 0.463 & 0.486 & 0.472 & 0.558 & 0.483 & 0.470 & 0.494 \\
+\hline
+Bin 5 & 0.618 & 0.431 & 0.496 & 0.543 & 0.434 & 0.451 & 0.650 & 0.501 & 0.487 & 0.514 \\
+\hline
+Bin 6 & 0.704 & 0.458 & 0.365 & 0.428 & 0.489 & 0.402 & 0.525 & 0.514 & 0.512 & 0.490 \\
+\hline
+Bin 7 & 0.521 & 0.602 & 0.381 & 0.430 & 0.478 & 0.343 & 0.475 & 0.512 & 0.495 & 0.384 \\
+\hline
+Bin 8 & 0.458 & 0.579 & 0.447 & 0.556 & 0.531 & 0.371 & 0.502 & 0.555 & 0.462 & 0.418 \\
+\hline
+Bin 9 & 0.494 & 0.469 & 0.399 & 0.564 & 0.550 & 0.471 & 0.602 & 0.512 & 0.396 & 0.532 \\
+\hline
+Bin 10 & 0.570 & 0.476 & 0.428 & 0.627 & 0.626 & 0.638 & 0.765 & 0.579 & 0.550 & 0.723 \\
+\hline
+Bin 11 & 0.466 & 0.583 & 0.543 & 0.478 & 0.455 & 0.457 & 0.580 & 0.518 & 0.704 & 0.509 \\
+\hline
+Bin 12 & 0.427 & 0.726 & 0.464 & 0.500 & 0.376 & 0.308 & 0.511 & 0.446 & 0.570 & 0.328 \\
+\hline
+}
+{Valores del descriptor chroma obtenidos sin normalización}
+{tab: chroma}
+
+\tabla
+{|l|c|c|c|c|c|c|c|c|c|c|}
+{
+\hline
+&Tema 1 & Tema 2 & Tema 3 & Tema 4 & Tema 5 & Tema 6 & Tema 7 & Tema 8 & Tema 9 & Tema 10 \\
+\hline
+Bin 1  & 0.659 & 0.693 & 0.597 & 0.745 & 0.545 & 0.424 & 0.720 & 0.600 & 0.531 & 0.459 \\
+\hline
+Bin 2  & 0.663 & 0.587 & 0.570 & 0.614 & 0.672 & 0.605 & 0.660 & 0.639 & 0.512 & 0.639 \\
+\hline
+Bin 3  & 0.731 & 0.633 & 0.735 & 0.553 & 0.893 & 0.796 & 0.663 & 0.753 & 0.607 & 0.843 \\
+\hline
+Bin 4  & 0.684 & 0.559 & 0.931 & 0.605 & 0.635 & 0.617 & 0.729 & 0.631 & 0.614 & 0.646 \\
+\hline
+Bin 5  & 0.808 & 0.563 & 0.648 & 0.710 & 0.567 & 0.590 & 0.850 & 0.655 & 0.637 & 0.672 \\
+\hline
+Bin 6  & 0.920 & 0.599 & 0.477 & 0.559 & 0.639 & 0.525 & 0.686 & 0.672 & 0.669 & 0.641 \\
+\hline
+Bin 7  & 0.681 & 0.787 & 0.498 & 0.562 & 0.625 & 0.448 & 0.621 & 0.669 & 0.647 & 0.502 \\
+\hline
+Bin 8  & 0.599 & 0.757 & 0.584 & 0.727 & 0.694 & 0.485 & 0.656 & 0.725 & 0.604 & 0.546 \\
+\hline
+Bin 9  & 0.646 & 0.613 & 0.522 & 0.737 & 0.719 & 0.616 & 0.787 & 0.669 & 0.518 & 0.695 \\
+\hline
+Bin 10 & 0.745 & 0.622 & 0.559 & 0.820 & 0.818 & 0.834 & 1.000 & 0.757 & 0.719 & 0.945 \\
+\hline
+Bin 11 & 0.609 & 0.762 & 0.710 & 0.625 & 0.595 & 0.597 & 0.758 & 0.677 & 0.920 & 0.665 \\
+\hline
+Bin 12 & 0.558 & 0.949 & 0.607 & 0.654 & 0.492 & 0.403 & 0.668 & 0.583 & 0.745 & 0.429 \\
+\hline
+}
+{Valores del descriptor chroma obtenidos normalizados}
+{tab: chroma}
 
 \section{Implementaciones}
-En las siguientes subsecciones se exponen los scripts utilizados a lo largo de
-este trabajo.
-
 \subsection{Preparación de la señal temporal}
+\label{Prep}
 \begin{verbatim}
 import librosa
 import numpy as np
-filename='/Users/Fede/Desktop/stew.mp3'
+import matplotlib.pyplot as plt
+carpeta='/Users/Fede/Desktop/The Turn of a Friendly Card 1979 (GPF)/Canciones del trabajo/'
+filename='10'
+formato='.mp3'
+filename=carpeta+filename+formato
 # cargar audio
 y, sr = librosa.load(filename)
 # extraer silencios al principio y final
@@ -266,13 +351,16 @@ y,index=librosa.effects.trim(y, top_db=60, ref=np.amax, frame_length=2048, hop_l
 valor_max=np.max(y)
 y=y/valor_max
 \end{verbatim}
-
 \subsection{Visualización de la STFT}
+\label{stft}
 \begin{verbatim}
 import librosa
 import numpy as np
 import matplotlib.pyplot as plt
-filename='/Users/Fede/Desktop/stew.mp3'
+carpeta='/Users/Fede/Desktop/'
+filename='burno mars'
+formato='.mp3'
+filename=carpeta+filename+formato
 # cargar audio
 y, sr = librosa.load(filename)
 # extraer silencios al principio y final
@@ -289,32 +377,113 @@ plt.tight_layout()
 plt.show()
 \end{verbatim}
 
-\subsection{Estimación del tempo}
+\subsection{Descriptor Tempo}
+\label{tempo}
 \begin{verbatim}
-  import librosa
-  import numpy as np
-  filename='/Users/Fede/Desktop/stew.mp3'
-  # cargar audio
-  y, sr = librosa.load(filename)
-  # extraer silencios al principio y final
-  y,index=librosa.effects.trim(y, top_db=60, ref=np.amax, frame_length=2048, hop_length=50)
-  # normalizar
-  valor_max=np.max(y)
-  y=y/valor_max
-  # calcular tempo
-  hop_length = 512
-  oenv = librosa.onset.onset_strength(y=y, sr=sr, hop_length=hop_length)
-  tempogram = librosa.feature.tempogram(onset_envelope=oenv, sr=sr,
-                                        hop_length=hop_length)
-  ac_global = librosa.autocorrelate(oenv, max_size=tempogram.shape[0])
-  ac_global = librosa.util.normalize(ac_global)
-  # Estimate the global tempo for display purposes
-  tempo = librosa.beat.tempo(onset_envelope=oenv, sr=sr,hop_length=hop_length)[0]
-  print(tempo)
+import librosa
+import numpy as np
+
+carpeta='/Users/Fede/Desktop/The Turn of a Friendly Card 1979 (GPF)/Canciones del trabajo/'
+filename='10'
+formato='.mp3'
+filename=carpeta+filename+formato
+# cargar audio
+y, sr = librosa.load(filename)
+# extraer silencios al principio y final
+y,index=librosa.effects.trim(y, top_db=60, ref=np.amax, frame_length=2048, hop_length=50)
+# normalizar
+valor_max=np.max(y)
+y=y/valor_max
+# calcular tempo
+hop_length = 512
+oenv = librosa.onset.onset_strength(y=y, sr=sr, hop_length=hop_length)
+tempogram = librosa.feature.tempogram(onset_envelope=oenv, sr=sr,
+                                      hop_length=hop_length)
+ac_global = librosa.autocorrelate(oenv, max_size=tempogram.shape[0])
+ac_global = librosa.util.normalize(ac_global)
+# Estimate the global tempo for display purposes
+tempo = librosa.beat.tempo(onset_envelope=oenv, sr=sr,hop_length=hop_length)[0]
+print(tempo)
+\end{verbatim}
+\subsection{Silence Rate}
+\label{silence rate}
+\begin{verbatim}
+import librosa
+import numpy as np
+carpeta='/Users/Fede/Desktop/The Turn of a Friendly Card 1979 (GPF)/Canciones del trabajo/'
+filename='9'
+formato='.mp3'
+filename=carpeta+filename+formato
+# cargar audio
+y, sr = librosa.load(filename)
+# # extraer silencios al principio y final
+# y,index=librosa.effects.trim(y, top_db=60, ref=np.amax,
+# frame_length=1024, hop_length=50)
+# normalizar
+valor_max=np.max(y)
+y=y/valor_max
+# calcular sr
+intervals=librosa.effects.split(y, top_db=60, ref=np.amax,
+frame_length=1024, hop_length=50)
+M_ns=0
+for i in range(0,intervals.shape[0]):
+    M_ns = M_ns+intervals[i,1]-intervals[i,0]
+N=len(y)
+SR=((N-M_ns)/N)
+SR=np.array([SR])
+print(SR)
 \end{verbatim}
 
+\subsection{Factor de cresta}
+\label{factor de cresta}
+\begin{verbatim}
+import librosa
+import numpy as np
+import matplotlib.pyplot as plt
+carpeta='/Users/Fede/Desktop/The Turn of a Friendly Card 1979 (GPF)/Canciones del trabajo/'
+filename='10'
+formato='.mp3'
+filename=carpeta+filename+formato
+# cargar audio
+y, sr = librosa.load(filename)
+# extraer silencios al principio y final
+y,index=librosa.effects.trim(y, top_db=60, ref=np.amax, frame_length=2048, hop_length=50)
+# normalizar
+valor_max=np.max(y)
+y=y/valor_max
+# calculo el valor rms
+y_rms=y*y
+y_rms=np.sum(y_rms)
+y_rms=y_rms/len(y)
+y_rms=np.sqrt(y_rms)
+# calculo el valor maximo
+y_max=np.max(y) # siempre vale 1
+# calculo el factor de cresta
+factor_de_cresta=((y_max)/(y_rms))
+print(factor_de_cresta)
+\end{verbatim}
 
-
-
+\subsection{Chroma}
+\label{chroma}
+\begin{verbatim}
+import librosa
+import numpy as np
+carpeta='/Users/Fede/Desktop/The Turn of a Friendly Card 1979 (GPF)/Canciones del trabajo/'
+filename='10'
+formato='.mp3'
+filename=carpeta+filename+formato
+# cargar audio
+y, sr = librosa.load(filename)
+# extraer silencios al principio y final
+y,index=librosa.effects.trim(y, top_db=60, ref=np.amax,
+frame_length=1024, hop_length=50)
+# normalizar
+valor_max=np.max(y)
+y=y/valor_max
+# calculo el chromagram
+chromagram=librosa.feature.chroma_cqt(y,sr)
+chromagram=np.mean(chromagram,1)
+np.savetxt('test.txt',chromagram,delimiter=' \\ ',fmt='%.3f', newline=' & ')
+\end{verbatim}
 
 \end{document}

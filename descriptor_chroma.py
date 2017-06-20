@@ -1,7 +1,7 @@
 import librosa
 import numpy as np
-carpeta='/Users/Fede/Desktop/'
-filename='copia de burno mars'
+carpeta='/Users/Fede/Desktop/The Turn of a Friendly Card 1979 (GPF)/Canciones del trabajo/'
+filename='10'
 formato='.mp3'
 filename=carpeta+filename+formato
 # cargar audio
@@ -15,4 +15,4 @@ y=y/valor_max
 # calculo el chromagram
 chromagram=librosa.feature.chroma_cqt(y,sr)
 chromagram=np.mean(chromagram,1)
-np.savetxt(chroma+'.txt',chromagram,delimiter=',',fmt='%.3f', newline=' & ')
+np.savetxt('test.txt',chromagram,delimiter=' \\ ',fmt='%.3f', newline=' & ')

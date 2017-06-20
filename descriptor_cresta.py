@@ -1,8 +1,8 @@
 import librosa
 import numpy as np
 import matplotlib.pyplot as plt
-carpeta='/Users/Fede/Desktop/'
-filename='copia de burno mars'
+carpeta='/Users/Fede/Desktop/The Turn of a Friendly Card 1979 (GPF)/Canciones del trabajo/'
+filename='10'
 formato='.mp3'
 filename=carpeta+filename+formato
 # cargar audio
@@ -21,5 +21,5 @@ y_rms=np.sqrt(y_rms)
 y_max=np.max(y) # siempre vale 1
 # calculo el factor de cresta
 factor_de_cresta=((y_max)/(y_rms))
-
+print(factor_de_cresta)
 

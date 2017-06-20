@@ -1,12 +1,12 @@
 # Fdb version 3
-["biber TP2_DSP"] 1497902019 "TP2_DSP.bcf" "TP2_DSP.bbl" "TP2_DSP" 1497905205
-  "TP2_DSP.bcf" 1497905204 100212 000cb80fd06f5f8251cdf277759faf3e ""
+["biber TP2_DSP"] 1497902019 "TP2_DSP.bcf" "TP2_DSP.bbl" "TP2_DSP" 1497987301
+  "TP2_DSP.bcf" 1497987301 100212 000cb80fd06f5f8251cdf277759faf3e ""
   "bibliografia.bib" 1497902012 1977 989d1e79062b8835bb01990860e658de ""
   (generated)
-  "TP2_DSP.blg"
   "TP2_DSP.bbl"
-["pdflatex"] 1497905203 "TP2_DSP.tex" "TP2_DSP.pdf" "TP2_DSP" 1497905205
-  "./TP2_DSP.out" 1497905204 1115 fab1cb555d0793e1e644749b2dbe5d75 ""
+  "TP2_DSP.blg"
+["pdflatex"] 1497987300 "TP2_DSP.tex" "TP2_DSP.pdf" "TP2_DSP" 1497987301
+  "./TP2_DSP.out" 1497987301 1382 0fd17576e341815e373689b446cd5829 ""
   "./imagenes/stft.png" 1497902349 972666 cf76a099186513e12aa972ae3aa723b5 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -139,16 +139,16 @@
   "/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1432479641 1764542 91654ba72bdb667e84ea24f076ae16d8 ""
   "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1461447283 3849859 d06f0633cadadb6f745f20b80feff1a8 ""
   "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
-  "TP2_DSP.aux" 1497905204 4869 52148e62b753816f45c67c6363e63009 ""
+  "TP2_DSP.aux" 1497987301 6509 5f53042e8b3b08669ac8238cade746c4 ""
   "TP2_DSP.bbl" 1497902021 5054 c1136eb527a5526800be7b99aa65facf "biber TP2_DSP"
-  "TP2_DSP.out" 1497905204 1115 fab1cb555d0793e1e644749b2dbe5d75 ""
-  "TP2_DSP.run.xml" 1497905204 2328 613010b53ee90b8ef77ba5a2dba4a28f ""
-  "TP2_DSP.tex" 1497905203 11501 9da18669f9ae0706313110a0d9755077 ""
+  "TP2_DSP.out" 1497987301 1382 0fd17576e341815e373689b446cd5829 ""
+  "TP2_DSP.run.xml" 1497987301 2328 613010b53ee90b8ef77ba5a2dba4a28f ""
+  "TP2_DSP.tex" 1497987298 17080 942377e01f9cf89c849e77821d27534e ""
   "imagenes/stft.png" 1497902349 972666 cf76a099186513e12aa972ae3aa723b5 ""
   (generated)
-  "TP2_DSP.pdf"
   "TP2_DSP.bcf"
+  "TP2_DSP.log"
+  "TP2_DSP.run.xml"
+  "TP2_DSP.pdf"
   "TP2_DSP.out"
   "TP2_DSP.aux"
-  "TP2_DSP.run.xml"
-  "TP2_DSP.log"
