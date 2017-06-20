@@ -61,50 +61,6 @@
       \verb http://www.nyu.edu/classes/bello/MIR_files/tonality.pdf
       \endverb
     \endentry
-    \entry{DanNingJiang}{inproceedings}{}
-      \name{author}{5}{}{%
-        {{hash=401e81a8d8fc0896f35a19d96d16113e}{Jiang}{J\bibinitperiod}{Dan-Ning}{D\bibinithyphendelim N\bibinitperiod}{}{}{}{}}%
-        {{hash=85d0a719691a40e2ed58fc722d0ebda7}{Lu}{L\bibinitperiod}{Lie}{L\bibinitperiod}{}{}{}{}}%
-        {{hash=42b65939fa6dfa68a259b54ec29ad89c}{Zhang}{Z\bibinitperiod}{Hong-Jiang}{H\bibinithyphendelim J\bibinitperiod}{}{}{}{}}%
-        {{hash=113e2827b526949ee89a3936c6b0b6f6}{Tao}{T\bibinitperiod}{Jian-Hua}{J\bibinithyphendelim H\bibinitperiod}{}{}{}{}}%
-        {{hash=16a2cd0a541c165c22a5a2ab8a62e664}{Cai}{C\bibinitperiod}{Lian-Hong}{L\bibinithyphendelim H\bibinitperiod}{}{}{}{}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{d5b1fea336ee7975c3af8d7d6376c8e2}
-      \strng{fullhash}{b4639d9555724acac9ee0323b62d4dfc}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings. {IEEE} International Conference on Multimedia and Expo}
-      \field{title}{Music type classification by spectral contrast feature}
-      \verb{doi}
-      \verb 10.1109/icme.2002.1035731
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1109/icme.2002.1035731
-      \endverb
-    \endentry
-    \entry{kurth2006cyclic}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=787358407be451b809f8b60c8113e66c}{Kurth}{K\bibinitperiod}{Frank}{F\bibinitperiod}{}{}{}{}}%
-        {{hash=f1a3b923e9c66e8b43c6533b75629c68}{Gehrmann}{G\bibinitperiod}{Thorsten}{T\bibinitperiod}{}{}{}{}}%
-        {{hash=80b6d841b668c1c8aa2744a675afd39e}{Müller}{M\bibinitperiod}{Meinard}{M\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{52c3aa53e09871bd3ed89681d892eadc}
-      \strng{fullhash}{52c3aa53e09871bd3ed89681d892eadc}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{ISMIR}
-      \field{title}{The Cyclic Beat Spectrum: Tempo-Related Audio Features for Time-Scale Invariant Audio Identification.}
-      \field{year}{2006}
-      \field{pages}{35\bibrangedash 40}
-      \range{pages}{6}
-    \endentry
     \entry{stft}{article}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
@@ -113,6 +69,39 @@
       \verb{url}
       \verb http://librosa.github.io/librosa/generated/librosa.core.stft.html?highlight=stft#librosa.core.stft
       \endverb
+    \endentry
+    \entry{alonso2004tempo}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=f88e3491c0f59f731b50e728b6c132c5}{Alonso}{A\bibinitperiod}{Miguel\bibnamedelima A}{M\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{hash=aec7d43f7c5ea1426c242ee4c14428fd}{Richard}{R\bibinitperiod}{Gaël}{G\bibinitperiod}{}{}{}{}}%
+        {{hash=bea1c7fcdbb5c52185f50dc1c71ab45c}{David}{D\bibinitperiod}{Bertrand}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{b4e7580c71c426b499b07176d77c9b1d}
+      \strng{fullhash}{b4e7580c71c426b499b07176d77c9b1d}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{ISMIR}
+      \field{title}{Tempo And Beat Estimation Of Musical Signals.}
+      \field{year}{2004}
+    \endentry
+    \entry{goto1997issues}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=10440cfb2f7fcc24ebb29906d8d899ed}{Goto}{G\bibinitperiod}{Masataka}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=f15139a009abc9b45b838d372b440f08}{Muraoka}{M\bibinitperiod}{Yoichi}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{19daadd0cabf3aa649de2b78cf14bf13}
+      \strng{fullhash}{19daadd0cabf3aa649de2b78cf14bf13}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Working Notes of the IJCAI-97 Workshop on Issues in AI and Music-Evaluation and Assessment}
+      \field{title}{Issues in evaluating beat tracking systems}
+      \field{year}{1997}
+      \field{pages}{9\bibrangedash 16}
+      \range{pages}{8}
     \endentry
   \endsortlist
 \endrefsection

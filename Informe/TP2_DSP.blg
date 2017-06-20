@@ -1,14 +1,14 @@
-[1] Config.pm:324> INFO - This is Biber 2.1
-[2] Config.pm:327> INFO - Logfile is 'TP2_DSP.blg'
-[325] biber-darwin:276> INFO - === Mon Jun 19, 2017, 16:53:40
-[325] Biber.pm:333> INFO - Reading 'TP2_DSP.bcf'
-[558] Biber.pm:645> INFO - Found 6 citekeys in bib section 0
-[610] Biber.pm:2977> INFO - Processing section 0
-[651] Biber.pm:3115> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
-[653] 6ce97eef.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
-[655] 6ce97eef.pm:895> INFO - Found BibTeX data source 'bibliografia.bib'
-[773] 76c5e630.pm:66> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[773] 76c5e630.pm:66> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[773] Biber.pm:2854> INFO - Sorting list 'none' of type 'entry' with scheme 'none' and locale 'es-ES'
-[780] bbl.pm:505> INFO - Writing 'TP2_DSP.bbl' with encoding 'UTF-8'
-[781] bbl.pm:596> INFO - Output to TP2_DSP.bbl
+[0] Config.pm:324> INFO - This is Biber 2.1
+[0] Config.pm:327> INFO - Logfile is 'TP2_DSP.blg'
+[45] biber-darwin:276> INFO - === Tue Jun 20, 2017, 18:19:57
+[45] Biber.pm:333> INFO - Reading 'TP2_DSP.bcf'
+[145] Biber.pm:645> INFO - Found 6 citekeys in bib section 0
+[163] Biber.pm:2977> INFO - Processing section 0
+[179] Biber.pm:3115> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
+[181] 6ce97eef.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[182] 6ce97eef.pm:895> INFO - Found BibTeX data source 'bibliografia.bib'
+[258] 76c5e630.pm:66> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[258] 76c5e630.pm:66> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[259] Biber.pm:2854> INFO - Sorting list 'none' of type 'entry' with scheme 'none' and locale 'es-ES'
+[269] bbl.pm:505> INFO - Writing 'TP2_DSP.bbl' with encoding 'UTF-8'
+[271] bbl.pm:596> INFO - Output to TP2_DSP.bbl

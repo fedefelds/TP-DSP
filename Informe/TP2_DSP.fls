@@ -245,10 +245,10 @@ INPUT ./imagenes/stft.png
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/vf/adobe/palatino/pplbc7t.vf
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
-INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/palatino/pplrc7t.tfm
-INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/palatino/pplrc7t.tfm
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/vf/adobe/palatino/pplrc7t.vf
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm

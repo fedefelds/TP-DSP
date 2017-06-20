@@ -154,7 +154,8 @@ Los objetivos de este trabajo son los siguientes:
 \end{itemize}
 
 \section{Descriptores Elegidos}
-
+\subsection{Factor de cresta}
+Explicar que onda el factor de cresta\ldots
 \subsection{Silence Rate}
 Dicho descriptor es experimental. Constiuye una manera de medir que tan
 silenciosa es una canción. Sea una señal de $N$ muestras. Se propone dividir la
@@ -193,39 +194,54 @@ la señal. Por ejemplo, es capaz de señalar la similaridad musical percibida en
 un tono de Shepard \cite{bello}.
 
 En este trabajo, dicho analisis es implementado mediante el uso de la funcion \emph{{librosa.feature.chroma\_stft}}.
-\subsection{Spectral Contrast}
-Dada una señal musical, se presenta el problema de como identificar a que tipo de
-musica pertenece la señal en cuestion. Este descriptor resulta util a la hora de
-realizar esta tarea. Jiang et al. indica que es posible que este descriptor puede llegar
-a tener una mejor capacidad de discriminacion de tipos musicales que los MFCC
-\cite{DanNingJiang}.
-
-Dicho descriptor considera las diferencias entre los picos espectrales y los valles
-espectrales para cada sub banda. En la mayoria de los casos en los que se analiza
-musica, los fuertes picos corresponden aproximadamente con las componentes armonicas
-mientras que las componentes no armonicas o ruidos corresponden con los valles.
-Por eso el descriptor en cuestión permite caracterizar la distribucion relativa
-de las componentes armonicas y no armonicas del espectro.
-
-En este trabajo, dicho analisis es implementado mediante el uso de la funcion \emph{{librosa.feature.spectral\_contrast}}.
-\subsection{Tempogram}
-
-
-Este descriptor se basa en un tratamiento similar al presentado en la seccion
-\ref{Sec:Chroma}. En el caso de dicha seccion, se recurre a mapear varias octavas
-o harmonicos a una determinada cantidad de bins \cite{kurth2006cyclic}. En el caso del tempograma se
-recurre a mapear varios tempos que difieren por un factor de 2 en un mismo bin.
-En terminos analogos, podemos pensar en los armonicos de una frecuencia dada,
-que no son mas que frecuencias relacionadas por un factor de 2.
-
-En este trabajo, dicho analisis es implementado mediante el uso del metodo
-\emph{{librosa.feature.tempogram}}.
+% \subsection{Spectral Contrast}
+% Dada una señal musical, se presenta el problema de como identificar a que tipo de
+% musica pertenece la señal en cuestion. Este descriptor resulta util a la hora de
+% realizar esta tarea. Jiang et al. indica que es posible que este descriptor puede llegar
+% a tener una mejor capacidad de discriminacion de tipos musicales que los MFCC
+% \cite{DanNingJiang}.
+%
+% Dicho descriptor considera las diferencias entre los picos espectrales y los valles
+% espectrales para cada sub banda. En la mayoria de los casos en los que se analiza
+% musica, los fuertes picos corresponden aproximadamente con las componentes armonicas
+% mientras que las componentes no armonicas o ruidos corresponden con los valles.
+% Por eso el descriptor en cuestión permite caracterizar la distribucion relativa
+% de las componentes armonicas y no armonicas del espectro.
+%
+% En este trabajo, dicho analisis es implementado mediante el uso de la funcion \emph{{librosa.feature.spectral\_contrast}}.
+% \subsection{Tempogram}
+%
+%
+% Este descriptor se basa en un tratamiento similar al presentado en la seccion
+% \ref{Sec:Chroma}. En el caso de dicha seccion, se recurre a mapear varias octavas
+% o harmonicos a una determinada cantidad de bins \cite{kurth2006cyclic}. En el caso del tempograma se
+% recurre a mapear varios tempos que difieren por un factor de 2 en un mismo bin.
+% En terminos analogos, podemos pensar en los armonicos de una frecuencia dada,
+% que no son mas que frecuencias relacionadas por un factor de 2.
+%
+% En este trabajo, dicho analisis es implementado mediante el uso del metodo
+% \emph{{librosa.feature.tempogram}}.
 
 \section{Resultados}
 En la siguiente sección se describe la implementacion de los objetivos propuestos
-en la sección \ref{sec: intro}. En las subsecciones \ref{sec: prep}, \ref{sec: stft}
- y \ref{sec: tempo} se utiliza la canción \emph{Brain Stew} de GreenDay como
-señal de prueba.
+en la sección \ref{sec: intro}. El álbum a analizar es \emph{The Turn of a Friendly
+card  \emph{de} The Alan Parsons Project}. Dicho álbum consta de las siguientes
+canciones:
+\begin{enumerate}
+  \item May Be a Price to Pay
+  \item Games People Play
+  \item Time
+  \item I Don't Wanna Go Home
+  \item The Gold Bug
+  \item The Turn of a Friendly Card: The Turn of a Friendly Card (Part 1)
+  \item The Turn of a Friendly Card: Snake Eyes
+  \item The Turn of a Friendly Card: The Ace Of Swords
+  \item The Turn of a Friendly Card: Nothing Left To Lose
+  \item The Turn of a Friendly Card: The Turn of a Friendly Card (Part 2)
+  
+
+\end{enumerate}
+
 \subsection{Preparación de la señal temporal}
 %  Implemente un sistema que pueda cargar sen ̃ales de audio, remover el
 %  silencio al principio y al final de las mismas y normalizarlas.
@@ -247,12 +263,34 @@ El resultado obtenido es la siguiente figura:
 {stft}
 {Visualización de la STFT}
 {fig: stft}
+
 \subsection{Estimación del tempo}
 \label{sec: tempo}
-Para la estimacion del tempo se implementa el siguiente script:
+
+La estimacion del tempo es fundamental para el procesamiento automatico de musica.
+Segun Alonso et al. \cite{alonso2004tempo}, el tempo es un elemento que sustenta
+la musica occidental, y por lo tanto su comprension y modelado es de gran interes
+en el campo del procesamiento automatico de musica.
+
+Es por eso que hoy en dia existen varias opciones a la hora de estimar el tempo
+de una cancion \cite{goto1997issues}. En este caso, se implementa este descriptor
+mediante el uso de la funcion \emph{{librosa.feature.chroma\_stft}}.
+
+Los resultados obtenidos son:
+
+La implementacion de dicho descriptor es detallada en el anexo \ref{tempo}
+
+\subsection{Factor de cresta}
+Los resultados obtenidos son:
+
+La implementacion de dicho descriptor es detallada en el anexo \ref{tempo}
+
+\subsection{Silence Rate}
+
+\subsection{Chroma Analysis}
 
 
-\section{Análisis de resultados}
+% \section{Análisis de resultados}
 
 
 \section{Conclusión}

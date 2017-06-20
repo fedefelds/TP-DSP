@@ -2215,9 +2215,9 @@
     <bcf:citekey order="1">fujishima1999realtime</bcf:citekey>
     <bcf:citekey order="2">Ellis</bcf:citekey>
     <bcf:citekey order="3">bello</bcf:citekey>
-    <bcf:citekey order="4">DanNingJiang</bcf:citekey>
-    <bcf:citekey order="5">kurth2006cyclic</bcf:citekey>
-    <bcf:citekey order="6">stft</bcf:citekey>
+    <bcf:citekey order="4">stft</bcf:citekey>
+    <bcf:citekey order="5">alonso2004tempo</bcf:citekey>
+    <bcf:citekey order="6">goto1997issues</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="none" type="entry" sortscheme="none">
   <bcf:sorting>
