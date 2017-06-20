@@ -19,6 +19,8 @@
 
 \usepackage{layout}     % no se..
 
+\usepackage{lineno}
+
 \usepackage[sorting=none]{biblatex}   % para manejar la bibliografia / referencias
 
 \usepackage{lipsum}     % para generar texto random
@@ -58,6 +60,16 @@
  % defino el titulo del Paper
 
 \date{} % lo pongo vacio para que no aparezca abajo del abstract
+
+\newcommand{\figura}[3]{
+\begin{figurehere}
+\centering
+\includegraphics[width=\linewidth]{#1}
+\captionof{figure}{#2}
+\label{#3}
+\end{figurehere}
+}
+
 
 \usepackage{fancyhdr}
 
@@ -113,6 +125,7 @@
 
 \begin{multicols}{2}
 \section{Introducción}
+\label{sec: intro}
 En este informe se describe el diseño y la implementacion de un sistema capaz de
 analizar canciones y extraer informacion util de las mismas. Para ello se desarrllo
 una serie de herramientas basadas en la libreria \textit{Librosa}. Dicha libreria
@@ -126,26 +139,33 @@ Los objetivos de este trabajo son los siguientes:
   \item Implementar un sistema que pueda visualizar la STFT de una señal
   \item Implementar un sistema que pueda estimar el tempo de una señal
   \item Implementar un sistema que pueda calcular 3 descriptores a elegir
-  \item Implementar un sistema que pueda normalizar los valores obtenidos
   \item Procesar un disco de música con las herramientas desarrolladas
+  \item Implementar un sistema que pueda normalizar los valores obtenidos
 \end{itemize}
 
 \section{Descriptores Elegidos}
 
-\subsection{Tempo}
-La estimacion del tempo es fundamental para el procesamiento automatico de musica
-Segun Alonso et al. \cite{alonso2004tempo}, el tempo es un elemento que sustenta
-la musica occidental, y por lo tanto su comprension y modelado es de gran interes
-en el campo del procesamiento automatico de musica.
+\subsection{Silence Rate}
+Dicho descriptor es experimental. Constiuye una manera de medir que tan
+silenciosa es una canción. Sea una señal de $N$ muestras. Se propone dividir la
+canción en intervalos silenciosos y no silenciosos. Se obtiene que de $N$ muestras,
+$M_s$ son silenciosas y $N-M_s$ no lo son.
 
-Es por eso que hoy en dia existen varias opciones a la hora de estimar el tempo
-de una cancion \cite{goto1997issues}. En este caso, se implementa este descriptor
-mediante el uso de la funcion \emph{{librosa.feature.chroma\_stft}}.
+El Silence Rate esta dado por la relacion entre la cantidad de muestras
+silenciosas y la cantidad total de muestras:
 
+\begin{equation}
+  SR=\frac{N-M_s}{N}
+\end{equation}
 
+Como $N-M_s\leq N$, entonces $0 \leq SR \leq 1$.
+Una canción cuyo $SR$ es 1 corresponde a una señal totalmente silenciosa.
+Similarmente, una cancion cuyo $SR$ es nulo corresponde a una señal totalmente
+no silenciosa.
 
-\cite{alonso2004tempo}
-En este trabajo, dicho analisis es implementado mediante el uso del metodo \emph{{librosa.beat.tempo}}.
+En este trabajo, dicho analisis es implementado mediante el uso del metodo
+\emph{{librosa.effects.split}}.
+
 \subsection{Chroma Analisys}
 \label{Sec:Chroma}
 El Chroma analisys fue introducido por primera vez por Fujishima en \cite{fujishima1999realtime}.
@@ -188,20 +208,112 @@ recurre a mapear varios tempos que difieren por un factor de 2 en un mismo bin.
 En terminos analogos, podemos pensar en los armonicos de una frecuencia dada,
 que no son mas que frecuencias relacionadas por un factor de 2.
 
-En este trabajo, dicho analisis es implementado mediante el uso del metodo \emph{{librosa.feature.tempogram}}.
+En este trabajo, dicho analisis es implementado mediante el uso del metodo
+\emph{{librosa.feature.tempogram}}.
+
 \section{Resultados}
+En la siguiente sección se describe la implementacion de los objetivos propuestos
+en la sección \ref{sec: intro}. En las subsecciones \ref{sec: prep}, \ref{sec: stft}
+ y \ref{sec: tempo} se utiliza la canción \emph{Brain Stew} de GreenDay como
+señal de prueba.
+\subsection{Preparación de la señal temporal}
+\label{sec: prep}
+La preparacion de la señal consistie en cargar el archivo, extraer el silencio
+al principio y al final y finalmente, normalizar la señal. Dichas tareas se
+implementan mediante un script en python:
 
 
+\subsection{Visualización de la STFT}
+\label{sec: stft}
+Para la implementacion de la STFT, se considera el siguiente script, propuesto
+en \cite{stft}:
 
+
+El resultado obtenido es la siguiente figura:
+\figura
+{stft}
+{Visualización de la STFT}
+{fig: stft}
+\subsection{Estimación del tempo}
+\label{sec: tempo}
+Para la estimacion del tempo se implementa el siguiente script:
 
 
 \section{Análisis de resultados}
 
+
 \section{Conclusión}
-
-
 \printbibliography
 \end{multicols}
+
+\newpage
+\appendix
+
+\section{Implementaciones}
+En las siguientes subsecciones se exponen los scripts utilizados a lo largo de
+este trabajo.
+
+\subsection{Preparación de la señal temporal}
+\begin{verbatim}
+import librosa
+import numpy as np
+filename='/Users/Fede/Desktop/stew.mp3'
+# cargar audio
+y, sr = librosa.load(filename)
+# extraer silencios al principio y final
+y,index=librosa.effects.trim(y, top_db=60, ref=np.amax, frame_length=2048, hop_length=50)
+# normalizar
+valor_max=np.max(y)
+y=y/valor_max
+\end{verbatim}
+
+\subsection{Visualización de la STFT}
+\begin{verbatim}
+import librosa
+import numpy as np
+import matplotlib.pyplot as plt
+filename='/Users/Fede/Desktop/stew.mp3'
+# cargar audio
+y, sr = librosa.load(filename)
+# extraer silencios al principio y final
+y,index=librosa.effects.trim(y, top_db=60, ref=np.amax, frame_length=2048, hop_length=50)
+# normalizar
+valor_max=np.max(y)
+y=y/valor_max
+D = librosa.stft(y)
+librosa.display.specshow(librosa.amplitude_to_db(D,ref=np.max)
+,y_axis='log', x_axis='time')
+plt.title('Power spectrogram')
+plt.colorbar(format='%+2.0f dB')
+plt.tight_layout()
+plt.show()
+\end{verbatim}
+
+\subsection{Estimación del tempo}
+\begin{verbatim}
+  import librosa
+  import numpy as np
+  filename='/Users/Fede/Desktop/stew.mp3'
+  # cargar audio
+  y, sr = librosa.load(filename)
+  # extraer silencios al principio y final
+  y,index=librosa.effects.trim(y, top_db=60, ref=np.amax, frame_length=2048, hop_length=50)
+  # normalizar
+  valor_max=np.max(y)
+  y=y/valor_max
+  # calcular tempo
+  hop_length = 512
+  oenv = librosa.onset.onset_strength(y=y, sr=sr, hop_length=hop_length)
+  tempogram = librosa.feature.tempogram(onset_envelope=oenv, sr=sr,
+                                        hop_length=hop_length)
+  ac_global = librosa.autocorrelate(oenv, max_size=tempogram.shape[0])
+  ac_global = librosa.util.normalize(ac_global)
+  # Estimate the global tempo for display purposes
+  tempo = librosa.beat.tempo(onset_envelope=oenv, sr=sr,hop_length=hop_length)[0]
+  print(tempo)
+\end{verbatim}
+
+
 
 
 

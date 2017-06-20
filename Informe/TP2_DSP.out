@@ -1,10 +1,17 @@
 \BOOKMARK [1][-]{section.1}{Introducci\363n}{}% 1
 \BOOKMARK [1][-]{section.2}{Descriptores Elegidos}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Tempo}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.1}{Silence Rate}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Chroma Analisys}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Spectral Contrast}{section.2}% 5
 \BOOKMARK [2][-]{subsection.2.4}{Tempogram}{section.2}% 6
 \BOOKMARK [1][-]{section.3}{Resultados}{}% 7
-\BOOKMARK [1][-]{section.4}{An\341lisis de resultados}{}% 8
-\BOOKMARK [1][-]{section.5}{Conclusi\363n}{}% 9
-\BOOKMARK [1][-]{section.6}{Referencias}{}% 10
+\BOOKMARK [2][-]{subsection.3.1}{Preparaci\363n de la se\361al temporal}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.2}{Visualizaci\363n de la STFT}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.3}{Estimaci\363n del tempo}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{An\341lisis de resultados}{}% 11
+\BOOKMARK [1][-]{section.5}{Conclusi\363n}{}% 12
+\BOOKMARK [1][-]{section.6}{Referencias}{}% 13
+\BOOKMARK [1][-]{appendix.Alph1}{Implementaciones}{}% 14
+\BOOKMARK [2][-]{subsection.Alph1.1}{Preparaci\363n de la se\361al temporal}{appendix.Alph1}% 15
+\BOOKMARK [2][-]{subsection.Alph1.2}{Visualizaci\363n de la STFT}{appendix.Alph1}% 16
+\BOOKMARK [2][-]{subsection.Alph1.3}{Estimaci\363n del tempo}{appendix.Alph1}% 17

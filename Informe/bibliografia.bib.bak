@@ -42,6 +42,19 @@
   year      = {2004},
 }
 
+@InProceedings{goto1997issues,
+  author    = {Goto, Masataka and Muraoka, Yoichi},
+  title     = {Issues in evaluating beat tracking systems},
+  booktitle = {Working Notes of the IJCAI-97 Workshop on Issues in AI and Music-Evaluation and Assessment},
+  year      = {1997},
+  pages     = {9--16},
+}
+
+@Article{,
+  title = {librosa.core.stft},
+  url   = {http://librosa.github.io/librosa/generated/librosa.core.stft.html?highlight=stft#librosa.core.stft},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 ,
