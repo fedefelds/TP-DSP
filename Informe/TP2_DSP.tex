@@ -182,16 +182,16 @@ cuadratico.
 Dicho descriptor es experimental. Constiuye una manera de medir que tan
 silenciosa es una canción. Sea una señal de $N$ muestras. Se propone dividir la
 canción en intervalos silenciosos y no silenciosos. Se obtiene que de $N$ muestras,
-$M_s$ son silenciosas y $N-M_s$ no lo son.
+$M_{ns}$ son no silenciosas y $N-M_{ns}$ lo son.
 
 El Silence Rate esta dado por la relacion entre la cantidad de muestras
 silenciosas y la cantidad total de muestras:
 
-\begin{equation}
-  SR=\frac{N-M_s}{N}
-\end{equation}
+\begin{equation*}
+  SR=\frac{N-M_{ns}}{N}
+\end{equation*}
 
-Como  0 $\leq N-M_s\leq N$, entonces $0 \leq SR \leq 1$.
+Como  0 $\leq N-M_{ns}\leq N$, entonces $0 \leq SR \leq 1$.
 Una canción cuyo $SR$ es 1 corresponde a una señal totalmente silenciosa.
 Similarmente, una cancion cuyo $SR$ es nulo corresponde a una señal totalmente
 no silenciosa.
