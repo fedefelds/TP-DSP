@@ -165,7 +165,19 @@ Es por eso que hoy en dia existen varios métodos disponibles para estimar el te
 de una cancion \cite{goto1997issues}. En este caso, se implementa este descriptor
 mediante el uso de la funcion \emph{{librosa.feature.chroma\_stft}}.
 \subsection{Factor de cresta}
-Explicar que onda el factor de cresta\ldots
+Segun \cite{ wiki:crest}{}, el factor de cresta es una manera de medir que tan
+pronunciados son los picos de una señal. Un factor de cresta igual a 1 indica
+la ausencia de picos en la señal.
+
+Dada una señal, el factor de cresta de la misma esta dado por
+\begin{equation*}
+  FC=\frac{\left|S_{max}\right|}{S_{rms}}
+\end{equation*}
+
+Donde $S_{max}$ es maximo valor que toma la señal y $S_{rms}$ es su valor medio
+cuadratico.
+
+
 \subsection{Silence Rate}
 Dicho descriptor es experimental. Constiuye una manera de medir que tan
 silenciosa es una canción. Sea una señal de $N$ muestras. Se propone dividir la
