@@ -272,15 +272,115 @@ de una cancion \cite{goto1997issues}. En este caso, se implementa este descripto
 mediante el uso de la funcion \emph{{librosa.feature.chroma\_stft}}.
 
 Los resultados obtenidos son:
+La tabla \ref{tab: tempo} presenta los resultados obtenidos y los compara con
+resultados disponibles en \emph{https://songbpm.com}.
+\vspace{0.3 cm}
+\tabla
+{|l|c|c|}
+{
+\hline
+        & BPM estimado   &  BPM web \\
+\hline
+Tema 1	& 112.34	&  110 \\
+\hline
+Tema 2	& 129.199 &	  132 \\
+\hline
+Tema 3	& 143.55	&  143 \\
+\hline
+Tema 4	& 92.28	  &   92 \\
+\hline
+Tema 5	& 123.04	&  122 \\
+\hline
+Tema 6	& 89.1	  &  177 \\
+\hline
+Tema 7	& 151.99	&  76 \\
+\hline
+Tema 8	& 143.55	&  140 \\
+\hline
+Tema 9	& 151.99	&  151 \\
+\hline
+Tema 10 & 	95	  &    91 \\
+\hline
+}
+{Valores estimados y valores disponibles en la web}
+{tab: tempo}
 
 La implementacion de dicho descriptor es detallada en el anexo \ref{tempo}
 
 \subsection{Factor de cresta}
 Los resultados obtenidos son:
+La tabla \ref{tab: fc} presenta los resultados obtenidos:
+\vspace{0.3 cm}
+\tabla
+{|l|c|c|}
+{
+\hline
+        & FC	& FC Normalizado \\
+\hline
+Tema 1	& 9.677	&0.715 \\
+\hline
+Tema 2	& 10.729	& 0.793 \\
+\hline
+Tema 3	& 11.719	& 0.866 \\
+\hline
+Tema 4	& 13.521	& 1  \\
+\hline
+Tema 5	& 9.14	& 0.675 \\
+\hline
+Tema 6	& 11.45	& 0.846 \\
+\hline
+Tema 7	& 8.67	& 0.641 \\
+\hline
+Tema 8	& 11.58	& 0.856\\
+\hline
+Tema 9	& 9.91	& 0.732 \\
+\hline
+Tema 10	& 9.28	& 0.686 \\
+\hline
+}
+{Valores estimados de factor de cresta y valores estimados de factor de cresta normalizados}
+{tab: fc}
 
 La implementacion de dicho descriptor es detallada en el anexo \ref{tempo}
 
 \subsection{Silence Rate}
+La tabla \ref{tab: sr} presenta los resultados obtenidos:
+\vspace{0.3 cm}
+\tabla
+{|l|c|c|}
+{
+\hline
+& SR	& SR Normalizado \\
+\hline
+Tema 1 &	0.0069 &	0.3317 \\
+\hline
+Tema 2	& 0.0159	& 0.7644 \\
+\hline
+Tema 3 &	0.00169 &	0.08125 \\
+\hline
+Tema 4 &	 0.0208	&  1 \\
+\hline
+Tema 5	&  0.007  &	0.3365 \\
+\hline
+Tema 6  &	0.001	 & 0.0480 \\
+\hline
+Tema 7	&  0.0093	 & 0.4471 \\
+\hline
+Tema 8  &	0.0014  &	0.0673 \\
+\hline
+Tema 9	&  0.0087 &	0.4182 \\
+\hline
+Tema 10	&  0.0057 &	0.2740 \\
+\hline
+}
+{Valores estimados de Silence Rate y valores estimados de Silence Rate normalizados}
+{tab: sr}
+
+Notese que este descriptor es sensible frente a la normalización:
+una vez realizda la normalización, aquella señal que presenta un SR
+normalizado igual a 1, esto no implica que la señal en cuestión es totalmente silenciosa
+
+La implementacion de dicho descriptor es detallada en el anexo \ref{silence rate}
 
 \subsection{Chroma Analysis}
 
