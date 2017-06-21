@@ -154,6 +154,16 @@ Los objetivos de este trabajo son los siguientes:
 \end{itemize}
 
 \section{Descriptores Elegidos}
+
+\subsection{Tempo}
+La estimacion del tempo es fundamental para el procesamiento automatico de musica.
+Segun Alonso et al. \cite{alonso2004tempo}, el tempo es un elemento que sustenta
+la musica occidental, y por lo tanto su comprension y modelado es de gran interes
+en el campo del procesamiento automatico de musica.
+
+Es por eso que hoy en dia existen varios métodos disponibles para estimar el tempo
+de una cancion \cite{goto1997issues}. En este caso, se implementa este descriptor
+mediante el uso de la funcion \emph{{librosa.feature.chroma\_stft}}.
 \subsection{Factor de cresta}
 Explicar que onda el factor de cresta\ldots
 \subsection{Silence Rate}
