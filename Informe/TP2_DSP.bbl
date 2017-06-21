@@ -110,6 +110,24 @@
       \verb http://www.nyu.edu/classes/bello/MIR_files/tonality.pdf
       \endverb
     \endentry
+    \entry{witten2005data}{book}{}
+      \name{author}{2}{}{%
+        {{hash=a05810254b3460a705b74882da47f531}{Witten}{W\bibinitperiod}{I.H.}{I\bibinitperiod}{}{}{}{}}%
+        {{hash=41db6855941f48d0c693979786902442}{Frank}{F\bibinitperiod}{E.}{E\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Science}%
+      }
+      \strng{namehash}{0717489f1eebc048eb314a9d2451e31d}
+      \strng{fullhash}{0717489f1eebc048eb314a9d2451e31d}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{The Morgan Kaufmann Series in Data Management Systems}
+      \field{title}{Data Mining: Practical Machine Learning Tools and Techniques, Second Edition}
+      \field{year}{2005}
+    \endentry
     \entry{stft}{article}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}

@@ -7,10 +7,20 @@
     <list default="true" id="5600859d-719a-48c3-a2aa-296611b7e208" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.pdf" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.synctex.gz" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.synctex.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.aux" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.bbl" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.bbl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.bcf" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.bcf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.blg" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.blg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.fdb_latexmk" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.fdb_latexmk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.fls" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.fls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.log" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.out" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.tex" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/bibliografia.bib" afterPath="$PROJECT_DIR$/Informe/bibliografia.bib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/descriptor_chroma.py" afterPath="$PROJECT_DIR$/descriptor_chroma.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/descriptor_stft.py" afterPath="$PROJECT_DIR$/descriptor_stft.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.txt" afterPath="$PROJECT_DIR$/test.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="descriptor_chroma.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="descriptor_chroma.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/descriptor_chroma.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="6" column="72" lean-forward="false" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -37,50 +47,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="descriptor_stft.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/descriptor_stft.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding>
-                <element signature="e#114#128#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="descriptor_tempo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/descriptor_tempo.py">
+      <file leaf-file-name="test.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="descriptor_sr.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/descriptor_sr.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="descriptor_cresta.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/descriptor_cresta.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="96" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,10 +108,10 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
         <option value="$PROJECT_DIR$/test.txt" />
-        <option value="$PROJECT_DIR$/descriptor_chroma.py" />
         <option value="$PROJECT_DIR$/descriptor_cresta.py" />
-        <option value="$PROJECT_DIR$/descriptor_stft.py" />
         <option value="$PROJECT_DIR$/descriptor_sr.py" />
+        <option value="$PROJECT_DIR$/descriptor_stft.py" />
+        <option value="$PROJECT_DIR$/descriptor_chroma.py" />
       </list>
     </option>
   </component>
@@ -184,7 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -213,7 +185,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -406,10 +378,10 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.descriptor_chroma" />
-        <item index="1" class="java.lang.String" itemvalue="Python.descriptor_cresta" />
-        <item index="2" class="java.lang.String" itemvalue="Python.descriptor_tempo" />
-        <item index="3" class="java.lang.String" itemvalue="Python.descriptor_sr" />
-        <item index="4" class="java.lang.String" itemvalue="Python.descriptor_stft" />
+        <item index="1" class="java.lang.String" itemvalue="Python.descriptor_stft" />
+        <item index="2" class="java.lang.String" itemvalue="Python.descriptor_cresta" />
+        <item index="3" class="java.lang.String" itemvalue="Python.descriptor_tempo" />
+        <item index="4" class="java.lang.String" itemvalue="Python.descriptor_sr" />
       </list>
     </recent_temporary>
   </component>
@@ -442,8 +414,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25767368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.360274" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.360274" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41917807" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="21" y="35" width="1238" height="730" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -456,6 +427,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -521,13 +493,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/librosa/effects.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8085">
-          <caret line="545" column="0" lean-forward="false" selection-start-line="545" selection-start-column="0" selection-end-line="545" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cargar_audio.py" />
     <entry file="file://$PROJECT_DIR$/prueba.py" />
     <entry file="file://$USER_HOME$/anaconda/lib/python3.6/codecs.py">
@@ -704,19 +669,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -724,32 +681,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="97" lean-forward="false" selection-start-line="18" selection-start-column="97" selection-end-line="18" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/descriptor_stft.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#114#128#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/descriptor_tempo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="12" />
+        <state relative-caret-position="90">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -776,13 +714,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/librosa/core/audio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/descriptor_stft.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="77" />
+          <folding>
+            <element signature="e#114#128#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/descriptor_chroma.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="6" column="72" lean-forward="false" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="96" />
+          <folding />
         </state>
       </provider>
     </entry>

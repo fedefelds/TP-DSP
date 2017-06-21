@@ -127,21 +127,23 @@
 
 \begin{abstract}
 
-\textit{Se hace un codigo que basicamente pude hacer muchas cosas. Se eligen 3 descriptores..\lipsum[1]}
+\textit{Se implementa un sistema capaz de procesar señales musicales y extraer información de las mismas.
+Dicho sistema es capaz de extraer silencios, normalizar, calcular la STFT, estimar el tempo e implementar
+3 descriptores de señales musicales. Entre ellos se introduce el Silence Rate.
+Dicho sistema es puesto a prueba y se extrae información relevante
+de un album musical. Los resultados obtenidos son bastante satisfactorios }
 
 \end{abstract}
 
-\vspace{1.5cm}% Additional space between abstract & rest of document
+\vspace{0.8 cm}% Additional space between abstract & rest of document
 
 \begin{multicols}{2}
 \section{Introducción}
 \label{sec: intro}
-En este informe se describe el diseño y la implementacion de un sistema capaz de
-analizar canciones y extraer informacion util de las mismas. Para ello se desarrllo
-una serie de herramientas basadas en la libreria \textit{Librosa}. Dicha libreria
-es de código abierto y esta validada por...AGREGAR VALIDACION...
-\lipsum[2]
-\lipsum[3]
+En este informe se describe el diseño y la implementación de un sistema capaz de
+analizar canciones y extraer información útil de las mismas. Para ello se desarrollo
+una serie de herramientas basadas en la librería \textit{Librosa}.
+
 Los objetivos de este trabajo son los siguientes:
 \begin{itemize}
   \item Implementar un sistema que pueda remover el silencio al principio y al final de una señal
@@ -156,16 +158,16 @@ Los objetivos de este trabajo son los siguientes:
 \section{Descriptores Elegidos}
 
 \subsection{Tempo}
-La estimacion del tempo es fundamental para el procesamiento automatico de musica.
+La estimacion del tempo es fundamental para el procesamiento automático de música.
 Segun Alonso et al. \cite{alonso2004tempo}, el tempo es un elemento que sustenta
-la musica occidental, y por lo tanto su comprension y modelado es de gran interes
-en el campo del procesamiento automatico de musica.
+la musica occidental, y por lo tanto su comprensión y modelado es de gran interés
+en el campo del procesamiento automático de música.
 
-Es por eso que hoy en dia existen varios métodos disponibles para estimar el tempo
-de una cancion \cite{goto1997issues}. En este caso, se implementa este descriptor
-mediante el uso de la funcion \emph{{librosa.feature.chroma\_stft}}.
+Es por eso que hoy en día existen varios métodos disponibles para estimar el tempo
+de una canción \cite{goto1997issues}. En este caso, se implementa este descriptor
+mediante el uso de la función \emph{{librosa.feature.chroma\_stft}}.
 \subsection{Factor de cresta}
-Segun \cite{ wiki:crest}{}, el factor de cresta es una manera de medir que tan
+Según \cite{ wiki:crest}{}, el factor de cresta es una manera de medir que tan
 pronunciados son los picos de una señal. Un factor de cresta igual a 1 indica
 la ausencia de picos en la señal.
 
@@ -174,51 +176,56 @@ Dada una señal, el factor de cresta de la misma esta dado por
   FC=\frac{\left|S_{max}\right|}{S_{rms}}
 \end{equation*}
 
-Donde $S_{max}$ es maximo valor que toma la señal y $S_{rms}$ es su valor medio
-cuadratico.
+Donde $S_{max}$ es máximo valor que toma la señal y $S_{rms}$ es su valor medio
+cuadrático.
 
 
 \subsection{Silence Rate}
-Dicho descriptor es experimental. Constiuye una manera de medir que tan
+Dicho descriptor es experimental. Constituye una manera de medir que tan
 silenciosa es una canción. Sea una señal de $N$ muestras. Se propone dividir la
 canción en intervalos silenciosos y no silenciosos. Se obtiene que de $N$ muestras,
 $M_{ns}$ son no silenciosas y $N-M_{ns}$ lo son.
 
-El Silence Rate esta dado por la relacion entre la cantidad de muestras
+El Silence Rate esta dado por la relación entre la cantidad de muestras
 silenciosas y la cantidad total de muestras:
 
 \begin{equation*}
   SR=\frac{N-M_{ns}}{N}
 \end{equation*}
+\vspace{0.3 cm}
 
 Como  0 $\leq N-M_{ns}\leq N$, entonces $0 \leq SR \leq 1$.
-Una canción cuyo $SR$ es 1 corresponde a una señal totalmente silenciosa.
-Similarmente, una cancion cuyo $SR$ es nulo corresponde a una señal totalmente
-no silenciosa.
 
-En este trabajo, dicho analisis es implementado mediante el uso del metodo
+Una canción cuyo $SR$ es 1 corresponde a una señal totalmente no silenciosa.
+Similarmente, una canción cuyo $SR$ es nulo corresponde a una señal totalmente
+silenciosa.
+
+En este trabajo, dicho análisis es implementado mediante el uso del método
 \emph{{librosa.effects.split}}.
 
 \subsection{Chroma Analisys}
 \label{Sec:Chroma}
 El Chroma analisys fue introducido por primera vez por Fujishima en \cite{fujishima1999realtime}.
-Dicho analisis es una manera de representar las caracteristicas espectrales
-de una señal sonora. En dicha representacion, el espectro de frecuencias es
+Dicho análisis es una manera de representar las características espectrales
+de una señal sonora. En dicha representación, el espectro de frecuencias es
 proyectado en 12 bins. Cada bin representa uno de los 12 distintos semitonos
 de una octava musical. En otras palabras, todas las octavas de una nota musical
 son mapeadas a uno de los 12 bins. Debido a esto es posible sintetizar, con cierta
-pérdida de informacion, una señal a partir de su Chroma Analisys, mediante Chroma
+pérdida de información, una señal a partir de su Chroma Analisys, mediante Chroma
 Synthesis.
 
-En \cite{Ellis} Ellis sostiene que el Chroma analisys puede dar informacion
-util acerca de la señal en cuestion que no es evidente en el espectro original de
+En \cite{Ellis} Ellis sostiene que el Chroma analisys puede dar información
+útil acerca de la señal en cuestion que no es evidente en el espectro original de
 la señal. Por ejemplo, es capaz de señalar la similaridad musical percibida en
 un tono de Shepard \cite{bello}.
 
-En este trabajo, dicho analisis es implementado mediante el uso de la funcion \emph{{librosa.feature.chroma\_stft}}.
+Por otro lado, en este trabajo se especula que dicho descriptor quizás sea capaz de indicar el tono
+predominante de una canción.
+
+En este trabajo, dicho análisis es implementado mediante el uso de la función \emph{{librosa.feature.chroma\_stft}}.
 
 \section{Resultados}
-En la siguiente sección se describe la implementacion de los objetivos propuestos
+En la siguiente sección se describe la implementación de los objetivos propuestos
 en la sección \ref{sec: intro}. El álbum a analizar es \emph{The Turn of a Friendly
 Card  \emph{de} The Alan Parsons Project}. Dicho álbum consta de las siguientes
 canciones:
@@ -235,20 +242,22 @@ canciones:
   \item The Turn of a Friendly Card: The Turn of a Friendly Card (Part 2)
 \end{enumerate}
 
+Para la normalización de cada descriptor se considera un método elemental provisto
+en \cite{witten2005data}. Los resultados de un descriptor se dividen
+por el máximo valor que toma el mismo. Esto genera un descriptor cuyo valor
+oscila entre 0 y 1.
+
 \subsection{Preparación de la señal temporal}
-%  Implemente un sistema que pueda cargar sen ̃ales de audio, remover el
-%  silencio al principio y al final de las mismas y normalizarlas.
-%  Esta tarea puede verse diagramada en los bloques violetas de la Figura 1.
+
 \label{sec: prep}
-La preparacion de la señal consistie en cargar el archivo, extraer el silencio
+La preparación de la señal consiste en cargar el archivo, extraer el silencio
 al principio y al final y finalmente, normalizar la señal. Dichas tareas se
 implementan mediante un script en python disponible en \ref{Prep}.
 
 \subsection{Visualización de la STFT}
 \label{sec: stft}
-Para la implementacion de la STFT, se considera el siguiente script, propuesto
+Para la implementación de la STFT, se considera el siguiente script, propuesto
 en \cite{stft}:
-
 
 El resultado obtenido es la siguiente figura:
 \figura
@@ -262,6 +271,7 @@ El resultado obtenido es la siguiente figura:
 La tabla \ref{tab: tempo} presenta los resultados obtenidos y los compara con
 resultados disponibles en \emph{https://songbpm.com}.
 \vspace{0.3 cm}
+
 \tabla
 {|l|c|c|}
 {
@@ -292,8 +302,7 @@ Tema 10 & 	95	  &    91 \\
 {Valores estimados y valores disponibles en la web}
 {tab: tempo}
 
-La implementacion de dicho descriptor es detallada en el anexo \ref{tempo}
-
+La implementación de dicho descriptor es detallada en el anexo \ref{tempo}
 \subsection{Factor de cresta}
 La tabla \ref{tab: fc} presenta los resultados obtenidos:
 \vspace{0.3 cm}
@@ -327,7 +336,11 @@ Tema 10	& 9.28	& 0.686 \\
 {Valores estimados de factor de cresta y valores estimados de factor de cresta normalizados}
 {tab: fc}
 
-La implementacion de dicho descriptor es detallada en el anexo \ref{factor de cresta}
+Notese que este descriptor es sensible frente a la técnica de normalización
+utilizada: una vez realizada la normalización, aquella señal que presenta un factor de cresta
+normalizado igual a 1, esto no implica que la señal en cuestión carezca de picos.
+\newline
+La implementación de dicho descriptor es detallada en el anexo \ref{factor de cresta}
 
 \subsection{Silence Rate}
 La tabla \ref{tab: sr} presenta los resultados obtenidos:
@@ -362,19 +375,110 @@ Tema 10	&  0.0057 &	0.2740 \\
 {Valores estimados de Silence Rate y valores estimados de Silence Rate normalizados}
 {tab: sr}
 
-Notese que este descriptor es sensible frente a la normalización:
-una vez realizda la normalización, aquella señal que presenta un SR
+Notese que este descriptor es sensible frente a la técnica de normalización
+utilizada: una vez realizada la normalización, aquella señal que presenta un SR
 normalizado igual a 1, esto no implica que la señal en cuestión es totalmente silenciosa
 
-La implementacion de dicho descriptor es detallada en el anexo \ref{silence rate}
+La implementación de dicho descriptor es detallada en el anexo \ref{silence rate}.
 
 \subsection{Chroma Analysis}
+Las tablas \ref{tab: chroma} y \ref{tab: chroma norm} presentan los valores
+ontenidos del descriptor chroma.
+Las mismas se encuentran en el anexo \ref{anexo: chroma} debido a su gran
+extensíon.
 
+\section{Análisis de resultados}
+% Preparacion
+\subsection{STFT}
+Al no estar interesado en la eficiencia computacional, se uso un hop size de 50
+muestras. El resultado de esta elección
+hace posible una reconstrucción fiel de la señal mediante la IFFT. A la vez, se
+utiliza una ventana Hamming de 2048 muestras.
+% tempo
+\subsection{Tempo}
+En general, se observan muy buenos resultados. En ciertos casos notables
+se encuentra que el resultado obtenido difiere de el valor esperado por un factor
+de 2. Dicha diferencia se da tanto por exceso como por defecto.
+Tal es el caso del tema 6 y el tema 7.
 
-% \section{Análisis de resultados}
+Para una aplicaciones musicales,
+esto no genera grandes inconvenientes.
 
+\subsection{Factor de cresta}
+Tal como se indico previamente, el factor de cresta se ve afectado por la técnica
+de normalización utilizada. Debido a la simplicidad del computo de dicho descriptor
+no se realiza una comparación con otras implementaciones.
+% FC
+% SR
+% Chroma
+\subsection{Chroma Analysis}
+La tabla \ref{tono} fue obtenida en \url{https://www.audiokeychain.com}.
+Dicha web permite analizar una canción y estimar el tono de la misma.
 
-\section{Conclusión}
+\tabla
+{|l|c|}
+{
+\hline
+ & Tono      \\
+ \hline
+Tema 1  & F  \\
+\hline
+Tema 2  & Bm \\
+\hline
+Tema 3  & Eb \\
+\hline
+Tema 4  & Am \\
+\hline
+Tema 5  & Dm \\
+\hline
+Tema 6  & Dm \\
+\hline
+Tema 7  & Am \\
+\hline
+Tema 8  & Dm \\
+\hline
+Tema 9  & Gm \\
+\hline
+Tema 10  & Dm \\
+\hline
+}
+{Estimación del tono}
+{tono}
+
+Si  a cada uno de los 12 bins de las tablas \ref{tab: chroma} o \ref{tab: chroma norm}
+le asignamos una de las 12 notas disponibles en una escala musical, podemos intentar
+inferir que tono predomina en una determinada canción a partir de su chroma analysis.
+
+A modo explicativo, se expone la siguiente figura:
+
+\figura
+{pianito}
+{Relación entre bins y notas en una octava}
+{pianito}
+
+El procedimiento de inferencia utilizado para estimar el tono predominante de una
+canción a partir de su análisis chroma es el siguiente:
+Se elige  canción i y se le hace un análisis chroma. Dicho análisis esta
+representado por la i-ésima columna de la tabla \ref{tab: chroma} o \ref{tab: chroma norm}.
+Se halla el bin con mayor indice y se lo extrapola a una nota musical mediante
+la figura \ref{pianito}.
+
+Dicho procedimiento de inferencia es muy simple de implementar, y podría simplificar
+aún mas la tarea de hallar el tono predominante de una canción.
+
+Los resultados de este procedimiento coinciden con la información presentada en la
+tabla \ref{tono} en 6 de los 10 temas estudiados.
+En los casos donde no hay coincidencia, se puede tomar el segundo valor mas grande
+de la i-esima columna.
+
+\subsection{Silence Rate}
+A simple vista, este descriptor otorga valores que parecen adecuados. Esto no es
+algo simple de justificar científicamente, pero desde un punto de vista intuitivo
+resulta esperable que una canción tenga un Silence Rate cercano a 0.
+
+Resultaría interesante poner a prueba este descriptor mediante un test subjetivo
+para estudiar si dicho descriptor puede ser evaluado de manera subjetiva.
+
 \printbibliography
 \end{multicols}
 
@@ -382,7 +486,7 @@ La implementacion de dicho descriptor es detallada en el anexo \ref{silence rate
 
 \appendix
 \section{Resultados adicionales}
-
+\label{anexo: chroma}
 \tabla
 {|l|c|c|c|c|c|c|c|c|c|c|}
 {
@@ -449,7 +553,7 @@ Bin 12 & 0.558 & 0.949 & 0.607 & 0.654 & 0.492 & 0.403 & 0.668 & 0.583 & 0.745 &
 \hline
 }
 {Valores del descriptor chroma obtenidos normalizados}
-{tab: chroma}
+{tab: chroma norm}
 
 \section{Implementaciones}
 \subsection{Preparación de la señal temporal}

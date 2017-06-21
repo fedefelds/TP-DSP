@@ -11,13 +11,18 @@
 \BOOKMARK [2][-]{subsection.3.4}{Factor de cresta}{section.3}% 11
 \BOOKMARK [2][-]{subsection.3.5}{Silence Rate}{section.3}% 12
 \BOOKMARK [2][-]{subsection.3.6}{Chroma Analysis}{section.3}% 13
-\BOOKMARK [1][-]{section.4}{Conclusi\363n}{}% 14
-\BOOKMARK [1][-]{section.5}{Referencias}{}% 15
-\BOOKMARK [1][-]{appendix.Alph1}{Resultados adicionales}{}% 16
-\BOOKMARK [1][-]{appendix.Alph2}{Implementaciones}{}% 17
-\BOOKMARK [2][-]{subsection.Alph2.1}{Preparaci\363n de la se\361al temporal}{appendix.Alph2}% 18
-\BOOKMARK [2][-]{subsection.Alph2.2}{Visualizaci\363n de la STFT}{appendix.Alph2}% 19
-\BOOKMARK [2][-]{subsection.Alph2.3}{Descriptor Tempo}{appendix.Alph2}% 20
-\BOOKMARK [2][-]{subsection.Alph2.4}{Factor de cresta}{appendix.Alph2}% 21
-\BOOKMARK [2][-]{subsection.Alph2.5}{Silence Rate}{appendix.Alph2}% 22
-\BOOKMARK [2][-]{subsection.Alph2.6}{Chroma}{appendix.Alph2}% 23
+\BOOKMARK [1][-]{section.4}{An\341lisis de resultados}{}% 14
+\BOOKMARK [2][-]{subsection.4.1}{STFT}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.2}{Tempo}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.3}{Factor de cresta}{section.4}% 17
+\BOOKMARK [2][-]{subsection.4.4}{Chroma Analysis}{section.4}% 18
+\BOOKMARK [2][-]{subsection.4.5}{Silence Rate}{section.4}% 19
+\BOOKMARK [1][-]{section.5}{Referencias}{}% 20
+\BOOKMARK [1][-]{appendix.Alph1}{Resultados adicionales}{}% 21
+\BOOKMARK [1][-]{appendix.Alph2}{Implementaciones}{}% 22
+\BOOKMARK [2][-]{subsection.Alph2.1}{Preparaci\363n de la se\361al temporal}{appendix.Alph2}% 23
+\BOOKMARK [2][-]{subsection.Alph2.2}{Visualizaci\363n de la STFT}{appendix.Alph2}% 24
+\BOOKMARK [2][-]{subsection.Alph2.3}{Descriptor Tempo}{appendix.Alph2}% 25
+\BOOKMARK [2][-]{subsection.Alph2.4}{Factor de cresta}{appendix.Alph2}% 26
+\BOOKMARK [2][-]{subsection.Alph2.5}{Silence Rate}{appendix.Alph2}% 27
+\BOOKMARK [2][-]{subsection.Alph2.6}{Chroma}{appendix.Alph2}% 28

@@ -1,14 +1,14 @@
 [0] Config.pm:324> INFO - This is Biber 2.1
 [0] Config.pm:327> INFO - Logfile is 'TP2_DSP.blg'
-[56] biber-darwin:276> INFO - === Wed Jun 21, 2017, 01:55:19
-[56] Biber.pm:333> INFO - Reading 'TP2_DSP.bcf'
-[155] Biber.pm:645> INFO - Found 7 citekeys in bib section 0
-[177] Biber.pm:2977> INFO - Processing section 0
-[198] Biber.pm:3115> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
-[199] 6ce97eef.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
-[201] 6ce97eef.pm:895> INFO - Found BibTeX data source 'bibliografia.bib'
-[307] 76c5e630.pm:66> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[307] 76c5e630.pm:66> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[307] Biber.pm:2854> INFO - Sorting list 'none' of type 'entry' with scheme 'none' and locale 'es-ES'
-[315] bbl.pm:505> INFO - Writing 'TP2_DSP.bbl' with encoding 'UTF-8'
-[316] bbl.pm:596> INFO - Output to TP2_DSP.bbl
+[49] biber-darwin:276> INFO - === Wed Jun 21, 2017, 12:43:11
+[49] Biber.pm:333> INFO - Reading 'TP2_DSP.bcf'
+[159] Biber.pm:645> INFO - Found 8 citekeys in bib section 0
+[176] Biber.pm:2977> INFO - Processing section 0
+[192] Biber.pm:3115> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
+[194] 6ce97eef.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[196] 6ce97eef.pm:895> INFO - Found BibTeX data source 'bibliografia.bib'
+[302] 76c5e630.pm:66> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[303] 76c5e630.pm:66> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[303] Biber.pm:2854> INFO - Sorting list 'none' of type 'entry' with scheme 'none' and locale 'es-ES'
+[318] bbl.pm:505> INFO - Writing 'TP2_DSP.bbl' with encoding 'UTF-8'
+[321] bbl.pm:596> INFO - Output to TP2_DSP.bbl
