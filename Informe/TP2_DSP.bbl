@@ -19,6 +19,55 @@
 
 \refsection{0}
   \sortlist{none}{none}
+    \entry{alonso2004tempo}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=f88e3491c0f59f731b50e728b6c132c5}{Alonso}{A\bibinitperiod}{Miguel\bibnamedelima A}{M\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{hash=aec7d43f7c5ea1426c242ee4c14428fd}{Richard}{R\bibinitperiod}{Gaël}{G\bibinitperiod}{}{}{}{}}%
+        {{hash=bea1c7fcdbb5c52185f50dc1c71ab45c}{David}{D\bibinitperiod}{Bertrand}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{b4e7580c71c426b499b07176d77c9b1d}
+      \strng{fullhash}{b4e7580c71c426b499b07176d77c9b1d}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{ISMIR}
+      \field{title}{Tempo And Beat Estimation Of Musical Signals.}
+      \field{year}{2004}
+    \endentry
+    \entry{goto1997issues}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=10440cfb2f7fcc24ebb29906d8d899ed}{Goto}{G\bibinitperiod}{Masataka}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=f15139a009abc9b45b838d372b440f08}{Muraoka}{M\bibinitperiod}{Yoichi}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{19daadd0cabf3aa649de2b78cf14bf13}
+      \strng{fullhash}{19daadd0cabf3aa649de2b78cf14bf13}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Working Notes of the IJCAI-97 Workshop on Issues in AI and Music-Evaluation and Assessment}
+      \field{title}{Issues in evaluating beat tracking systems}
+      \field{year}{1997}
+      \field{pages}{9\bibrangedash 16}
+      \range{pages}{8}
+    \endentry
+    \entry{wiki:crest}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{Wikipedia}{W\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Crest factor --- Wikipedia{,} The Free Encyclopedia}
+      \field{year}{2017}
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Crest_factor&oldid=786681961
+      \endverb
+    \endentry
     \entry{fujishima1999realtime}{book}{}
       \name{author}{1}{}{%
         {{hash=df82ffa4b36e9b1fae9d05a261995cc2}{Fujishima}{F\bibinitperiod}{Takuya}{T\bibinitperiod}{}{}{}{}}%
@@ -69,39 +118,6 @@
       \verb{url}
       \verb http://librosa.github.io/librosa/generated/librosa.core.stft.html?highlight=stft#librosa.core.stft
       \endverb
-    \endentry
-    \entry{alonso2004tempo}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=f88e3491c0f59f731b50e728b6c132c5}{Alonso}{A\bibinitperiod}{Miguel\bibnamedelima A}{M\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
-        {{hash=aec7d43f7c5ea1426c242ee4c14428fd}{Richard}{R\bibinitperiod}{Gaël}{G\bibinitperiod}{}{}{}{}}%
-        {{hash=bea1c7fcdbb5c52185f50dc1c71ab45c}{David}{D\bibinitperiod}{Bertrand}{B\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{b4e7580c71c426b499b07176d77c9b1d}
-      \strng{fullhash}{b4e7580c71c426b499b07176d77c9b1d}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{ISMIR}
-      \field{title}{Tempo And Beat Estimation Of Musical Signals.}
-      \field{year}{2004}
-    \endentry
-    \entry{goto1997issues}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=10440cfb2f7fcc24ebb29906d8d899ed}{Goto}{G\bibinitperiod}{Masataka}{M\bibinitperiod}{}{}{}{}}%
-        {{hash=f15139a009abc9b45b838d372b440f08}{Muraoka}{M\bibinitperiod}{Yoichi}{Y\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{19daadd0cabf3aa649de2b78cf14bf13}
-      \strng{fullhash}{19daadd0cabf3aa649de2b78cf14bf13}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Working Notes of the IJCAI-97 Workshop on Issues in AI and Music-Evaluation and Assessment}
-      \field{title}{Issues in evaluating beat tracking systems}
-      \field{year}{1997}
-      \field{pages}{9\bibrangedash 16}
-      \range{pages}{8}
     \endentry
   \endsortlist
 \endrefsection
