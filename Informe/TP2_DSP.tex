@@ -216,33 +216,6 @@ la señal. Por ejemplo, es capaz de señalar la similaridad musical percibida en
 un tono de Shepard \cite{bello}.
 
 En este trabajo, dicho analisis es implementado mediante el uso de la funcion \emph{{librosa.feature.chroma\_stft}}.
-% \subsection{Spectral Contrast}
-% Dada una señal musical, se presenta el problema de como identificar a que tipo de
-% musica pertenece la señal en cuestion. Este descriptor resulta util a la hora de
-% realizar esta tarea. Jiang et al. indica que es posible que este descriptor puede llegar
-% a tener una mejor capacidad de discriminacion de tipos musicales que los MFCC
-% \cite{DanNingJiang}.
-%
-% Dicho descriptor considera las diferencias entre los picos espectrales y los valles
-% espectrales para cada sub banda. En la mayoria de los casos en los que se analiza
-% musica, los fuertes picos corresponden aproximadamente con las componentes armonicas
-% mientras que las componentes no armonicas o ruidos corresponden con los valles.
-% Por eso el descriptor en cuestión permite caracterizar la distribucion relativa
-% de las componentes armonicas y no armonicas del espectro.
-%
-% En este trabajo, dicho analisis es implementado mediante el uso de la funcion \emph{{librosa.feature.spectral\_contrast}}.
-% \subsection{Tempogram}
-%
-%
-% Este descriptor se basa en un tratamiento similar al presentado en la seccion
-% \ref{Sec:Chroma}. En el caso de dicha seccion, se recurre a mapear varias octavas
-% o harmonicos a una determinada cantidad de bins \cite{kurth2006cyclic}. En el caso del tempograma se
-% recurre a mapear varios tempos que difieren por un factor de 2 en un mismo bin.
-% En terminos analogos, podemos pensar en los armonicos de una frecuencia dada,
-% que no son mas que frecuencias relacionadas por un factor de 2.
-%
-% En este trabajo, dicho analisis es implementado mediante el uso del metodo
-% \emph{{librosa.feature.tempogram}}.
 
 \section{Resultados}
 En la siguiente sección se describe la implementacion de los objetivos propuestos
