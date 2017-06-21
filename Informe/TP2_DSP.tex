@@ -220,7 +220,7 @@ En este trabajo, dicho analisis es implementado mediante el uso de la funcion \e
 \section{Resultados}
 En la siguiente sección se describe la implementacion de los objetivos propuestos
 en la sección \ref{sec: intro}. El álbum a analizar es \emph{The Turn of a Friendly
-card  \emph{de} The Alan Parsons Project}. Dicho álbum consta de las siguientes
+Card  \emph{de} The Alan Parsons Project}. Dicho álbum consta de las siguientes
 canciones:
 \begin{enumerate}
   \item May Be a Price to Pay
@@ -233,8 +233,6 @@ canciones:
   \item The Turn of a Friendly Card: The Ace Of Swords
   \item The Turn of a Friendly Card: Nothing Left To Lose
   \item The Turn of a Friendly Card: The Turn of a Friendly Card (Part 2)
-  
-
 \end{enumerate}
 
 \subsection{Preparación de la señal temporal}
@@ -244,8 +242,7 @@ canciones:
 \label{sec: prep}
 La preparacion de la señal consistie en cargar el archivo, extraer el silencio
 al principio y al final y finalmente, normalizar la señal. Dichas tareas se
-implementan mediante un script en python disponible en \
-
+implementan mediante un script en python disponible en \ref{Prep}.
 
 \subsection{Visualización de la STFT}
 \label{sec: stft}
@@ -262,16 +259,6 @@ El resultado obtenido es la siguiente figura:
 \subsection{Estimación del tempo}
 \label{sec: tempo}
 
-La estimacion del tempo es fundamental para el procesamiento automatico de musica.
-Segun Alonso et al. \cite{alonso2004tempo}, el tempo es un elemento que sustenta
-la musica occidental, y por lo tanto su comprension y modelado es de gran interes
-en el campo del procesamiento automatico de musica.
-
-Es por eso que hoy en dia existen varias opciones a la hora de estimar el tempo
-de una cancion \cite{goto1997issues}. En este caso, se implementa este descriptor
-mediante el uso de la funcion \emph{{librosa.feature.chroma\_stft}}.
-
-Los resultados obtenidos son:
 La tabla \ref{tab: tempo} presenta los resultados obtenidos y los compara con
 resultados disponibles en \emph{https://songbpm.com}.
 \vspace{0.3 cm}
@@ -308,7 +295,6 @@ Tema 10 & 	95	  &    91 \\
 La implementacion de dicho descriptor es detallada en el anexo \ref{tempo}
 
 \subsection{Factor de cresta}
-Los resultados obtenidos son:
 La tabla \ref{tab: fc} presenta los resultados obtenidos:
 \vspace{0.3 cm}
 \tabla
@@ -341,7 +327,7 @@ Tema 10	& 9.28	& 0.686 \\
 {Valores estimados de factor de cresta y valores estimados de factor de cresta normalizados}
 {tab: fc}
 
-La implementacion de dicho descriptor es detallada en el anexo \ref{tempo}
+La implementacion de dicho descriptor es detallada en el anexo \ref{factor de cresta}
 
 \subsection{Silence Rate}
 La tabla \ref{tab: sr} presenta los resultados obtenidos:
@@ -538,34 +524,6 @@ ac_global = librosa.util.normalize(ac_global)
 tempo = librosa.beat.tempo(onset_envelope=oenv, sr=sr,hop_length=hop_length)[0]
 print(tempo)
 \end{verbatim}
-\subsection{Silence Rate}
-\label{silence rate}
-\begin{verbatim}
-import librosa
-import numpy as np
-carpeta='/Users/Fede/Desktop/The Turn of a Friendly Card 1979 (GPF)/Canciones del trabajo/'
-filename='9'
-formato='.mp3'
-filename=carpeta+filename+formato
-# cargar audio
-y, sr = librosa.load(filename)
-# # extraer silencios al principio y final
-# y,index=librosa.effects.trim(y, top_db=60, ref=np.amax,
-# frame_length=1024, hop_length=50)
-# normalizar
-valor_max=np.max(y)
-y=y/valor_max
-# calcular sr
-intervals=librosa.effects.split(y, top_db=60, ref=np.amax,
-frame_length=1024, hop_length=50)
-M_ns=0
-for i in range(0,intervals.shape[0]):
-    M_ns = M_ns+intervals[i,1]-intervals[i,0]
-N=len(y)
-SR=((N-M_ns)/N)
-SR=np.array([SR])
-print(SR)
-\end{verbatim}
 
 \subsection{Factor de cresta}
 \label{factor de cresta}
@@ -594,6 +552,36 @@ y_max=np.max(y) # siempre vale 1
 # calculo el factor de cresta
 factor_de_cresta=((y_max)/(y_rms))
 print(factor_de_cresta)
+\end{verbatim}
+
+
+\subsection{Silence Rate}
+\label{silence rate}
+\begin{verbatim}
+import librosa
+import numpy as np
+carpeta='/Users/Fede/Desktop/The Turn of a Friendly Card 1979 (GPF)/Canciones del trabajo/'
+filename='9'
+formato='.mp3'
+filename=carpeta+filename+formato
+# cargar audio
+y, sr = librosa.load(filename)
+# # extraer silencios al principio y final
+# y,index=librosa.effects.trim(y, top_db=60, ref=np.amax,
+# frame_length=1024, hop_length=50)
+# normalizar
+valor_max=np.max(y)
+y=y/valor_max
+# calcular sr
+intervals=librosa.effects.split(y, top_db=60, ref=np.amax,
+frame_length=1024, hop_length=50)
+M_ns=0
+for i in range(0,intervals.shape[0]):
+    M_ns = M_ns+intervals[i,1]-intervals[i,0]
+N=len(y)
+SR=((N-M_ns)/N)
+SR=np.array([SR])
+print(SR)
 \end{verbatim}
 
 \subsection{Chroma}
