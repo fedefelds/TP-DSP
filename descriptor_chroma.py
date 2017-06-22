@@ -4,6 +4,7 @@ carpeta='/Users/Fede/Desktop/The Turn of a Friendly Card 1979 (GPF)/Canciones de
 filename='10'
 formato='.mp3'
 filename=carpeta+filename+formato
+filename='/Users/Fede/Desktop/The Turn of a Friendly Card 1979 (GPF)/587.wav'
 # cargar audio
 y, sr = librosa.load(filename)
 # extraer silencios al principio y final

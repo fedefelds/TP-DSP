@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5600859d-719a-48c3-a2aa-296611b7e208" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.pdf" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.synctex.gz" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.synctex.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.aux" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.bbl" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.bbl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.bcf" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.bcf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.blg" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.blg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.fdb_latexmk" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.fdb_latexmk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.fls" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.fls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.log" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.out" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/TP2_DSP.tex" afterPath="$PROJECT_DIR$/Informe/TP2_DSP.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informe/bibliografia.bib" afterPath="$PROJECT_DIR$/Informe/bibliografia.bib" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/descriptor_chroma.py" afterPath="$PROJECT_DIR$/descriptor_chroma.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/descriptor_stft.py" afterPath="$PROJECT_DIR$/descriptor_stft.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.txt" afterPath="$PROJECT_DIR$/test.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,7 +25,7 @@
       <file leaf-file-name="descriptor_chroma.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/descriptor_chroma.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="75">
               <caret line="6" column="72" lean-forward="false" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -51,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/test.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="96" />
+              <caret line="0" column="96" lean-forward="true" selection-start-line="0" selection-start-column="96" selection-end-line="0" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -107,11 +94,11 @@
         <option value="$PROJECT_DIR$/descriptor_tempo.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
-        <option value="$PROJECT_DIR$/test.txt" />
         <option value="$PROJECT_DIR$/descriptor_cresta.py" />
         <option value="$PROJECT_DIR$/descriptor_sr.py" />
         <option value="$PROJECT_DIR$/descriptor_stft.py" />
         <option value="$PROJECT_DIR$/descriptor_chroma.py" />
+        <option value="$PROJECT_DIR$/test.txt" />
       </list>
     </option>
   </component>
@@ -414,9 +401,9 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25767368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.360274" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.360274" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41917807" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="21" y="35" width="1238" height="730" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41917807" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="21" y="35" width="1238" height="730" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -725,15 +712,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="77" />
-          <folding>
-            <element signature="e#114#128#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/descriptor_chroma.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="75">
           <caret line="6" column="72" lean-forward="false" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -744,7 +728,7 @@
     <entry file="file://$PROJECT_DIR$/test.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="96" />
+          <caret line="0" column="96" lean-forward="true" selection-start-line="0" selection-start-column="96" selection-end-line="0" selection-end-column="96" />
           <folding />
         </state>
       </provider>
